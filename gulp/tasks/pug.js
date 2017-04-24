@@ -1,9 +1,14 @@
 'use strict';
 
 module.exports = function() {
+  var locals = ('.source/templates/data/content.json');
+  
   $.gulp.task('pug', function() {
-    return $.gulp.src('./source/template/pages/*.pug')
-      .pipe($.gp.pug({ pretty: true }))
+    return $.gulp.src('./source/templates/pages/*.pug')
+      .pipe($.gp.pug({
+        pretty: true,
+        locals: locals
+      }))
       .on('error', $.gp.notify.onError(function(error) {
         return {
           title: 'Pug',

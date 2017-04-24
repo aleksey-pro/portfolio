@@ -1,7 +1,11 @@
-(function() {
-  'use strict';
+'use strict';
 
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
-})();
+var myModule = require('./myModule');
+var colorPs = require('./colorPs');
+
+var myModuleInstance = new myModule();
+myModuleInstance.hello(); // 'hello!'
+myModuleInstance.goodbye(); // 'goodbye!'
+
+var myScriptInstance = new colorPs();
+myScriptInstance.colorit();

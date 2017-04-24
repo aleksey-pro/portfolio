@@ -1,12 +1,14 @@
 'use strict';
 
+//TODO favicons
+
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
     task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.foundation.js'),
-    cssFoundation: require('./gulp/paths/css.foundation.js'),
+    jsLibs: require('./gulp/paths/js.libs.js'),
+    cssLibs: require('./gulp/paths/css.libs.js'),
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
@@ -25,13 +27,14 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel(
     'sass',
     'pug',
-    'js:foundation',
-    'js:process',
     'copy:image',
     'copy:fonts',
-    'css:foundation',
+    'css:libs',
     'sprite:svg',
-    'sprites'
+    'webpack' //TODO watch
+    //'sprites'
+    // 'js:libs',
+    //'js:process'
   ),
   $.gulp.parallel(
     'watch',
