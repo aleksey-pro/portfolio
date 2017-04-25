@@ -1,0 +1,74 @@
+extends ../layout-about
+
+block title
+    title Страница для блога
+
+block arrow
+    a(href="").down-arrow
+        svg(width='30px' height='30px').hamburger__icon
+            use(xlink:href='assets/img/sprite.svg#common--arrow_down')
+
+block svg-title
+    svg(width='50px' height='50px').works-title
+        use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
+
+block text
+    .user__name
+        | Алексей Исаев
+    .user__desc
+        | Личный сайт веб-разработчика
+
+block content
+     section.portfolio
+        .portfolio__title
+            svg(width='200px' height='50px').title-svg
+                use(xlink:href='assets/img/sprite.svg#pages--works--works_title')
+            .portfolio__title
+                | Мои работы
+        .portfolio__to-site
+            .title.to-site__title
+                | сайт школы онлайн-образования
+            .to-site__subtitle
+                | HTML, CSS, JAVASCRIPT
+            .portfolio__btn
+                svg(width='10px' height='10px').works-title
+                    use(xlink:href='assets/img/sprite.svg#components--button--link')
+                span Посмотреть сайт
+        .portfolio__works
+            .works__slider
+                img(src='/assets/img/portfolio_slides.png' alt='works' style='height: 60px; width: 110px').works__slider-image
+            .works__down-preview
+                svg(width='10px' height='10px').down-icon
+                    use(xlink:href='assets/img/sprite.svg#components--portfolio--portf_arrow_down')
+            .works__up-preview
+                svg(width='10px' height='10px').up-icon
+                    use(xlink:href='assets/img/sprite.svg#components--portfolio--portf_arrow_up')
+     section.about
+        .about__title
+             svg(width='200px' height='50px').title-svg
+                 use(xlink:href='assets/img/sprite.svg#pages--works--about_title')
+                 .about__title
+                     | что обо мне говорят
+            //ul.about__reviews
+            //each review in reviews
+            //    each reviewData, reviewName in review
+            //        //console.log(reviewData, reviewName)
+            //        each reviewText, num in reviewData
+            //            -console.log(reviewText, num)
+            //            li.reiew-item
+            //                .review-image
+            //                    p= reviewText
+            //                    .name= reviewName
+            //                    .prof= reviewText
+
+            mixin reviews(text, name, prof)
+                li.reiew-item
+                    .review-image
+                    p= text
+                    .name= name
+                    .prof= prof
+            ul.reviews
+                +reviews('Этот парень проходил обучение веб-разработке не где-то, а в Loft', 'Ковальчук Дмитрий', '--основатель loftschool')
+                +reviews('Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на старых браузерах', 'Сабанцев Владимир', '--преподаватель loftschool')
+        .about__contact-form
+            include ../common/contact-form

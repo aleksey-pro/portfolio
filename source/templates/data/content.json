@@ -1,10 +1,26 @@
 {
-  "skills": [
+  "skill": [
     {
-      "Frontend" : [1, 2, 3]
+      "Frontend" : [{"title": "HTML5", "val": 80}, {"title": "CSS3", "val": 60}, {"title": "JavaScript\n& JQuery", "val": 45}]
     },
     {
-      "Backend" : [4, 5, 6]
+      "Backend" : [{"title": "Node.js\n& npm", "val": 20}]
+    }
+  ],
+  "skills": [
+    {
+      "Frontend" : ["HTML5", "CSS3", "JavaScript&JQuery"]
+    },
+    {
+      "Backend" : ["Node.js", "npm"]
+    }
+  ],
+  "reviews": [
+    {
+      "Ковальчук Дмитрий" : ["Этот парень проходил обучение веб-разработке не где-то, а в Loft", "--основатель loftschool"]
+    },
+    {
+      "Сабанцев Владимир" : ["Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на старых браузерах", "--преподаватель loftschool"]
     }
   ]
 }

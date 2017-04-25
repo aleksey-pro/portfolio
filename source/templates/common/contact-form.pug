@@ -1,0 +1,18 @@
+.contacts
+    .title.contacts__title
+        | связаться со мной
+    .contacts__form
+        mixin inputs(type, placeholder, id)
+            .contacts__lane
+                input(type=type placeholder=placeholder id=`auth-input--+${id}` name=id)
+        form.contacts__form
+            +inputs('text','Имя', 'name')
+            +inputs('text','Email', 'email')
+            +inputs('textarea','Ваше сообщение', 'mess')
+
+        mixin btns(href, name)
+            li.contacts-nav__btn
+                a(href=href class='user-nav__link')= name
+        ul.contacts-nav
+            +btns('http://vk.com','Отправить')
+            +btns('http://vk.com','Очистить')

@@ -1,0 +1,69 @@
+extends ../layout-about
+
+block svg-title
+    svg(width='50px' height='50px').works-title
+        use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
+
+block arrow
+    a(href="").down-arrow
+        svg(width='30px' height='30px').hamburger__icon
+            use(xlink:href='assets/img/sprite.svg#common--arrow_down')
+
+block content
+    .user
+        include ../common/user
+            block text
+                .user__name
+                    | Алексей Исаев
+                .user__desc
+                    | Личный сайт веб-разработчика
+    section.about
+        .about__left
+            svg.triangle.triangle_fill_white
+            .title.about__section-title
+                | Обо мне
+            .user-about
+                .user-about__picture
+                .user-about__title
+                    .subtitle
+                        | Кто я
+                .user-about__text
+                    p Я веб разработчик из Санкт-Петербурга. Мне 33 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        .about__right
+            svg.triangle.triangle_fill_beige
+
+            .about-data
+                .about-data__description.about-user-info
+                    .about-user-info__title
+                        .subtitle Чем я могу быть полезен
+                    .about-user-info__text
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia incidunt, quisquam sit harum totam, perspiciatis nesciunt, culpa at, laborum nobis error. In doloremque iusto rem, alias incidunt, expedita quos.
+                .about-data__content
+                    ul.skills
+                        each skill in skills
+                            each skillsArray, skillName in skill
+                                li.skills__item
+                                    .skill-section
+                                        .skill-section__title= skillName
+                                        ul.skill-section__list
+                                            each skillTitle in skillsArray
+                                                li.skills-section__item
+                                                    .skill
+                                                        svg.skill__circle
+                                                        .skill__name= skillTitle
+                    //- ul.skills
+                    //-   each skill in ['Frontend', 'Backend', 'WorkFlow']
+                    //-     li.skills__item
+                    //-       .skill-section
+                    //-         .skill-section__title= skill
+                    //-         ul.skill-section__list
+                    //-           each skillName in ['HTML5', 'CSS3', 'jQuery']
+                    //-             li.skills-section__item
+                    //-               .skill
+                    //-                 svg.skill__circle
+                    //-                 .skill__name= skillName
+    section.map
+        #map(style='width: 100%; height: 300px')
+            include ../common/my-contacts
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtnREyc4HgRBTafjCvQDAORAEeUNMhjAo"></script>

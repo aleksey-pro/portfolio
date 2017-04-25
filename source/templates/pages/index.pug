@@ -1,8 +1,21 @@
-extends ../layout
+extends ../layout-login
 
 block title
     title Главная страница
-
+    //- Шапка
+    .header-login
+        include ../common/header-login
 block content
-    p content
+        .user-block
+            include ../common/user
+                block text
+                    .user__name
+                        | Алексей Исаев
+                    .user__desc
+                        | Личный сайт веб-разработчика
+                    include ../common/socials
 
+            ul(class='user-nav')
+                +btns('http://vk.com', 'Мои работы', 'user-nav')
+                +btns('http://vk.com', 'Обо мне', 'user-nav')
+                +btns('http://vk.com', 'Блог', 'user-nav')

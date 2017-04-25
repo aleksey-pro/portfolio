@@ -1,0 +1,12 @@
+.auth
+    mixin inputs(type, placeholder, id, svgPath)
+        .auth__lane
+            .auth__icons
+                svg(width='20px' height='20px').auth__icon
+                    use(xlink:href=svgPath)
+            input(type=type placeholder=placeholder id=`auth-input--+${id}` name=id)
+    form.auth__form
+        +inputs('text','Логин', 'login', 'assets/img/sprite.svg#components--auth--login')
+        +inputs('text','Пароль', 'pass', 'assets/img/sprite.svg#components--auth--password')
+
+

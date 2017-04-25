@@ -1,0 +1,23 @@
+.socials-block
+    mixin socials(svgPath, url, name)
+        li.socials__item
+            a(href=url class=`socials__link socials__link--${name}`)
+                svg(width='50px' height='50px').socials__icon
+                    use(xlink:href='assets/img/sprite.svg#components--socials--' + svgPath)
+    ul.socials
+        +socials('vk', 'http://vk.com','vk')
+        +socials('github', 'http://github.com', 'gh')
+        +socials('in', 'http://linkedin.com', 'in')
+
+//.socials-block
+//    mixin svgicon(...items)
+//        each item in items
+//            li.socials__item
+//                a(href='#' class=`socials__link socials__link--${item}`)
+//                    svg(class="socials__icon")
+//                        use(xlink:href="img/sprite.svg#components--socials--" + item)
+//
+//    ul.socials
+//        +svgicon('vk', 'github', 'in')
+
+

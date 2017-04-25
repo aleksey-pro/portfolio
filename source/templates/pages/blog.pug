@@ -1,0 +1,29 @@
+extends ../layout-about
+
+block title
+    title Страница для блога
+
+block text
+    .title блог
+    .desc
+        | Статьи, которые я написал
+
+block content
+    aside.blog-nav
+        mixin link(link, name)
+            li.blog-items__item
+                a(href=link class='blog-items__link')= name
+        ul.blog-items
+            +link('article1', 'Статья 1')
+            +link('article2', 'Статья 2')
+    section.articles
+        mixin article (id, text)
+            article(class='article' id=`${id}`)
+                .article__title
+                    | Самое важное в SASS
+                .date 22 ноября 2017
+                .article__text
+                    p= text
+                hr
+        +article('article1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis corporis earum natus odit. Debitis labore, laboriosam nesciunt nisi officiis omnis provident quo repellat sed tempora, tempore veniam vero! Ab commodi consequuntur dicta distinctio dolorem dolores doloribus ducimus ea, eligendi error est illo iste laborum odio omnis perspiciatis porro praesentium quam quas quasi quis quisquam quod sapiente sequi suscipit unde vel voluptatum. Atque consectetur cum eligendi in inventore itaque necessitatibus quas repudiandae temporibus, voluptas! A commodi consequatur cum debitis, distinctio dolores eos facilis ipsum labore libero magnam maiores molestiae omnis placeat repellendus reprehenderit sed sint ut voluptas voluptate. Amet, at.')
+        +article('article2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis corporis earum natus odit. Debitis labore, laboriosam nesciunt nisi officiis omnis provident quo repellat sed tempora, tempore veniam vero! Ab commodi consequuntur dicta distinctio dolorem dolores doloribus ducimus ea, eligendi error est illo iste laborum odio omnis perspiciatis porro praesentium quam quas quasi quis quisquam quod sapiente sequi suscipit unde vel voluptatum. Atque consectetur cum eligendi in inventore itaque necessitatibus quas repudiandae temporibus, voluptas! A commodi consequatur cum debitis, distinctio dolores eos facilis ipsum labore libero magnam maiores molestiae omnis placeat repellendus reprehenderit sed sint ut voluptas voluptate. Amet, at.')

@@ -5,6 +5,7 @@
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
+  fs: require('fs'),
   path: {
     task: require('./gulp/paths/tasks.js'),
     jsLibs: require('./gulp/paths/js.libs.js'),

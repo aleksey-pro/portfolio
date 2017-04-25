@@ -1,0 +1,26 @@
+extends ../layout-login
+
+block title
+    title Страница авторизации
+
+block content
+    .login
+        .title.login__title
+            | авторизуйтесь
+        include ../common/auth-block
+        .check-form
+            input(type='checkbox' id='man' name='man' class='check__input')
+            label(class='check__label' for='man') Я человек
+            p.check-form__quest Вы точно не робот?
+            input(type='radio' id='yes' name='choose' class='choose__input--yes')
+            label(class='choose__label--yes' for='yes') Да
+            input(type='radio' id='no' name='choose' class='choose__input--no')
+            label(class='choose__label--no' for='no') Не уверен
+        mixin btns(href, name)
+            li.user-nav__btn
+                a(href=href class='user-nav__link')= name
+        ul.user-nav
+            +btns('http://vk.com','На главную')
+            +btns('http://vk.com','Войти')
+
+
