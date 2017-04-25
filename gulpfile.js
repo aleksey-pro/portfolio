@@ -32,7 +32,7 @@ $.gulp.task('default', $.gulp.series(
     'copy:fonts',
     'css:libs',
     'sprite:svg',
-    'webpack' //TODO watch
+    'webpack'
     //'sprites'
     // 'js:libs',
     //'js:process'

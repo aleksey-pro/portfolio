@@ -10,7 +10,7 @@ module.exports = function() {
     var imgStream = spriteData.img
       .pipe($.gulp.dest($.config.root + '/assets/img'));
     var cssStream = spriteData.css
-      .pipe($.gulp.dest('./source/style/common'));
+      .pipe($.gulp.dest('./source/styles'));
     return $.merge(imgStream, cssStream);
   });
 };
