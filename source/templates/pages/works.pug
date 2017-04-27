@@ -49,26 +49,14 @@ block content
                  use(xlink:href='assets/img/sprite.svg#pages--works--about_title')
                  .about__title
                      | что обо мне говорят
-            //ul.about__reviews
-            //each review in reviews
-            //    each reviewData, reviewName in review
-            //        //console.log(reviewData, reviewName)
-            //        each reviewText, num in reviewData
-            //            -console.log(reviewText, num)
-            //            li.reiew-item
-            //                .review-image
-            //                    p= reviewText
-            //                    .name= reviewName
-            //                    .prof= reviewText
-
-            mixin reviews(text, name, prof)
-                li.reiew-item
-                    .review-image
-                    p= text
-                    .name= name
-                    .prof= prof
-            ul.reviews
-                +reviews('Этот парень проходил обучение веб-разработке не где-то, а в Loft', 'Ковальчук Дмитрий', '--основатель loftschool')
-                +reviews('Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на старых браузерах', 'Сабанцев Владимир', '--преподаватель loftschool')
+        mixin reviews(text, name, prof)
+            li.reiew-item
+                .review-image
+                p= text
+                .name= name
+                .prof= prof
+        ul.reviews
+            +reviews('Этот парень проходил обучение веб-разработке не где-то, а в Loft', 'Ковальчук Дмитрий', '--основатель loftschool')
+            +reviews('Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на старых браузерах', 'Сабанцев Владимир', '--преподаватель loftschool')
         .about__contact-form
             include ../common/contact-form

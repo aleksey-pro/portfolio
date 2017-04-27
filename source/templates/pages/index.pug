@@ -15,6 +15,10 @@ block content
                         | Личный сайт веб-разработчика
                     include ../common/socials
 
+            mixin btns(href, name, cls)
+                li(class=`${cls}__btn`)
+                    a(href=href class=`${cls}__link`)=name
+
             ul(class='user-nav')
                 +btns('http://vk.com', 'Мои работы', 'user-nav')
                 +btns('http://vk.com', 'Обо мне', 'user-nav')
