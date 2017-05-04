@@ -1,0 +1,82 @@
+.about {
+  @extend %clearfix;
+  background: $olive;
+}
+
+.about-left, .about-right {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.about-left {
+  background: $olive;
+}
+
+.about-right {
+  background: $beige;
+}
+
+.about__triangles {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+
+.about-data {
+  margin-left: 35px;
+  margin-bottom: 80px;
+}
+
+.about-user-info {
+  margin-right: 25px;
+}
+
+.about-data__content {
+  color: $brand-green;
+}
+
+
+.about-user-info__title {
+  text-align: center;
+  margin: 6px auto 38px;
+}
+
+.about-user-info__text {
+  margin-bottom: 55px;
+}
+
+
+.map {
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 965px;
+}
+
+.gmnoprint span, .gmnoprint a, .gm-style-cc a {
+  display: none;
+}
+
+.contacts {
+  @include centered();
+  padding-bottom: 185px;
+}
+
+@media screen and (min-width: 1800px) {
+
+  .about__title, .about__user {
+    float: left;
+  }
+
+  .about__title {
+    width: 48%;
+  }
+
+  .about__user {
+    width: 52%;
+  }
+}
+

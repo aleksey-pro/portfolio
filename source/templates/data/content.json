@@ -1,5 +1,5 @@
 {
-  "skill": [
+  "skills": [
     {
       "Frontend" : [{"title": "HTML5", "val": 80}, {"title": "CSS3", "val": 60}, {"title": "JavaScript\n& JQuery", "val": 45}]
     },
@@ -7,9 +7,9 @@
       "Backend" : [{"title": "Node.js\n& npm", "val": 20}]
     }
   ],
-  "skills": [
+  "skilles": [
     {
-      "Frontend" : ["HTML5", "CSS3", "JavaScript&JQuery"]
+      "Frontend" : ["HTML5", "CSS3", "JavaScript\n&JQuery"]
     },
     {
       "Backend" : ["Node.js", "npm"]

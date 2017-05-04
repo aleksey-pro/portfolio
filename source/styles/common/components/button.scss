@@ -1,3 +1,23 @@
-.button-style {
-  display: block;
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: $light-green;
+  @include border-radius(20px);
+
+  span {
+    color: #fff;
+    font-family: 'Roboto-Medium', Arial, sans-serif;
+  }
+
+  .button-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }

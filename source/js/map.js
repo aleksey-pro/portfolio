@@ -9,10 +9,14 @@ function initMap() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
       // How zoomed in you want the map to start at (always required)
-      zoom: 10,
+      zoom: 11,
+      
+      disableDefaultUI: true,
     
       // The latitude and longitude to center the map (always required)
-      center: new google.maps.LatLng(59.91, 29.73),
+      center: new google.maps.LatLng(59.91, 29.93),
+  
+      scrollwheel: false,
     
       // How you would like to style the map.
       // https://snazzymaps.com/editor

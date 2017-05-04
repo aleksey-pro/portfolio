@@ -1,0 +1,32 @@
+.user {
+	text-align: center;
+
+  &__photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: inline-block;
+  }
+
+  &__photo-avatar {
+      display: block;
+      max-width: 100%;
+      background: #fff url('../../assets/img/ava11.jpg') 0 0 no-repeat;
+      background-size: cover;
+      height: 140px;
+  }
+
+  &__name {
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 35px;
+      font-family: 'Roboto-Medium', Arial, sans-serif;
+  }
+
+  &__desc {
+      color: #fff;
+  }
+
+}

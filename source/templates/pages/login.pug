@@ -4,23 +4,31 @@ block title
     title Страница авторизации
 
 block content
-    .login
-        .title.login__title
+    .login.user-block
+        .subtitle.login__title
             | авторизуйтесь
-        include ../common/auth-block
+            mixin inputs(type, placeholder, id, svgPath)
+                .login__lane
+                    .login__icons
+                        svg(width='20px' height='20px').login__icon
+                            use(xlink:href=svgPath)
+                    input(type=type placeholder=placeholder id=`auth-input--${id}` name=id).login__field
+        form.login-form
+            +inputs('text','Логин', 'login', 'assets/img/sprite.svg#components--auth--login')
+            +inputs('text','Пароль', 'pass', 'assets/img/sprite.svg#components--auth--password')
         .check-form
-            input(type='checkbox' id='man' name='man' class='check__input')
-            label(class='check__label' for='man') Я человек
+            input(type='checkbox' id='man' name='man' class='check-input')
+            span.checkbox-custom
+            label(class='check-label' for='man') Я человек
             p.check-form__quest Вы точно не робот?
-            input(type='radio' id='yes' name='choose' class='choose__input--yes')
-            label(class='choose__label--yes' for='yes') Да
-            input(type='radio' id='no' name='choose' class='choose__input--no')
-            label(class='choose__label--no' for='no') Не уверен
-        mixin btns(href, name)
-            li.user-nav__btn
-                a(href=href class='user-nav__link')= name
-        ul.user-nav
-            +btns('http://vk.com','На главную')
-            +btns('http://vk.com','Войти')
-
-
+            input(type='radio' id='yes' name='choose' class='choose-input--yes')
+            span(class='radio-custom' id='radio-yes')
+            label(class='choose-label choose-label--yes' for='yes') Да
+            input(type='radio' id='no' name='choose' class='choose-input--no')
+            span(class='radio-custom' id='radio-no')
+            label(class='choose-label choose-label--no' for='no') Не уверен
+        mixin btns (href, name, cls)
+            a(href=href class=`btn-nav__link ${cls}__link`)= name
+        .login-nav.btn-nav
+            +btns('http://vk.com', 'На главную', 'login-nav')
+            +btns('http://vk.com', 'Войти', 'login-nav')

@@ -1,0 +1,32 @@
+.triangle {
+  height: 100px;
+
+  &--fill {
+    &--olive {
+      fill: $olive;
+    }
+    &--beige {
+      fill: $beige;
+    }
+    &--yellow {
+      fill: $white;
+    }
+    &--navajo{
+      fill: $pale;
+    }
+  }
+}
+
+.portfolio__triangle, .blog__triangle {
+  position: absolute;
+  bottom: 100%;
+  width: 50%;
+}
+
+.portfolio__triangle--left, .blog__triangle--left {
+  left: 0;
+}
+
+.portfolio__triangle--right, .blog__triangle--right {
+  right: 0;
+}

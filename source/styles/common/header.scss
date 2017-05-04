@@ -1,3 +1,39 @@
-.header-style{
-  height: 150px;
+.header{
+  @extend %clearfix;
+  height: 600px;
+  position: relative;
+  background: #fff url('../../assets/img/header-bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.socials-block {
+  position: absolute;
+  left: 30px;
+  top: 35px;
+}
+
+.header__title {
+  @include centered(y);
+  text-align: center;
+  width: 100%;
+}
+
+.svg-title {
+  width: 63%;
+  height: 230px;
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.blog__svg-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+
+  height: 190px;
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.user-block {
+  @include centered();
 }

@@ -2,24 +2,22 @@ extends ../layout-login
 
 block title
     title Главная страница
-    //- Шапка
-    .header-login
-        include ../common/header-login
+
 block content
-        .user-block
+        .welcome__login
+            a(class='log-button' href='#')
+                span.log-button__text Авторизоваться
+        .user-block.welcome__user
             include ../common/user
-                block text
-                    .user__name
-                        | Алексей Исаев
-                    .user__desc
-                        | Личный сайт веб-разработчика
-                    include ../common/socials
-
-            mixin btns(href, name, cls)
-                li(class=`${cls}__btn`)
-                    a(href=href class=`${cls}__link`)=name
-
-            ul(class='user-nav')
+            block user-text
+                .user__name
+                    | Алексей Исаев
+                .user__desc
+                    | Личный сайт веб-разработчика
+                include ../common/socials
+            mixin btns (href, name, cls)
+                a(href=href class=`btn-nav__link ${cls}__link`)= name
+            .user-nav.btn-nav
                 +btns('http://vk.com', 'Мои работы', 'user-nav')
                 +btns('http://vk.com', 'Обо мне', 'user-nav')
                 +btns('http://vk.com', 'Блог', 'user-nav')

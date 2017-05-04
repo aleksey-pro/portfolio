@@ -1,18 +1,16 @@
-.contacts
-    .title.contacts__title
+.call
+    .subtitle.call__title
         | связаться со мной
-    .contacts__form
+    .call-fields
         mixin inputs(type, placeholder, id)
-            .contacts__lane
-                input(type=type placeholder=placeholder id=`auth-input--+${id}` name=id)
-        form.contacts__form
+                input(type=type placeholder=placeholder id=`auth-input--${id}` name=id).call-fields__field
+        form.call-fields__form
             +inputs('text','Имя', 'name')
             +inputs('text','Email', 'email')
-            +inputs('textarea','Ваше сообщение', 'mess')
+            textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='5').call-fields__field
 
         mixin btns(href, name)
-            li.contacts-nav__btn
-                a(href=href class='user-nav__link')= name
-        ul.contacts-nav
+            a(href=href class='btn-nav__link')= name
+        .call-nav.btn-nav
             +btns('http://vk.com','Отправить')
             +btns('http://vk.com','Очистить')

@@ -1,9 +1,8 @@
 header.header
-    .socials
-    include socials
-    a(href='#').hamburger-block
-        svg(width='50px' height='50px').hamburger__icon
-            use(xlink:href='assets/img/sprite.svg#common--hamburger')
+    block socials
+    block hamburger
     block arrow
-    block svg-title
-    include user
+    .header__title
+        block header__svg-title
+        .user-block
+            include user

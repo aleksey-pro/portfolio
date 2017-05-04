@@ -1,0 +1,16 @@
+.down-arrow {
+  bottom: 70px;
+  @include centered(x);
+  z-index: 10000;
+}
+
+.down-arrow__icon {
+  height: 20px;
+  width: 28px;
+  fill: #b7bcbb;
+
+  &:hover {
+    fill: #fff;
+    cursor: pointer;
+  }
+}

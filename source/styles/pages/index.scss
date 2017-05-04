@@ -1,0 +1,70 @@
+.welcome {
+  background: #fff url('../../assets/img/bg-welcome.jpg') center center no-repeat;
+  background-size: cover;
+  @extend %clearfix;
+}
+
+  //&:after {
+  //  content: '';
+  //  display: block;
+  //  height: 65px;
+  //}
+
+.welcome__login {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  .log-button {
+    display: block;
+    border: 1px solid #fff;
+    @include border-radius(20px);
+    height: 45px;
+    width: 180px;
+    color: #fff;
+    font-family: 'Roboto-Medium', Arial, sans-serif;
+    padding: 0 27px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+
+.welcome__user {
+  width: 380px;
+  background-color: rgba($dark-green, 0.7);
+  padding: 40px 65px 0;
+  text-align: center;
+}
+
+.user__photo {
+  margin-bottom: 0;
+}
+
+.user__name {
+  margin-bottom: 0;
+}
+
+.user__desc, .socials {
+  margin-bottom: 35px;
+}
+
+.user-nav {
+  margin: 0 -65px;
+}
+
+.user-nav__link {
+  width: 33.3%;
+}
+
+.footer-welcome {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto-Regular', Arial,sans-serif;
+}

@@ -1,0 +1,37 @@
+.works-slider {
+  position: relative;
+  height: 530px;
+
+
+  .works-slider__image {
+    height: 310px;
+    max-width: 100%;
+    display: block;
+    @include centered();
+  }
+}
+
+.works-preview__down, .works-preview__up {
+  width: 50%;
+  height: 225px;
+  background-size: cover;
+  float: left;
+  position: relative;
+}
+
+.works-preview__down {
+  background: $grey url('../../assets/img/portfolio-downslide.jpg') 0 0 no-repeat;
+  opacity: 0.5;
+}
+
+.works-preview__up {
+  background: $grey url('../../assets/img/portfolio-upslide.jpg') 0 0 no-repeat;
+  opacity: 0.5;
+}
+
+.works-preview__icon {
+  width: 45px;
+  height: 30px;
+  fill: #fff;
+  @include centered();
+}

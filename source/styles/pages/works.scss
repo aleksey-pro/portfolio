@@ -1,0 +1,73 @@
+.portfolio {
+  @extend %clearfix;
+}
+
+
+.portfolio-head{
+  width: 100%;
+  position: relative;
+  height: 185px;
+  background: $white;
+}
+
+
+.portfolio-head__title {
+  @include centered();
+  margin: 0;
+}
+
+.portfolio__head-svg {
+  width: 510px;
+  height: 160px;
+}
+
+.portfolio__to-site, .portfolio__works {
+  width: 50%;
+  height: 755px;
+}
+
+.portfolio__to-site {
+  position: relative;
+  float: left;
+  background-color: $olive;
+}
+
+.portfolio__works {
+  float: right;
+  background-color: $grey;
+}
+
+.to-site {
+  @include centered();
+  text-align: center;
+}
+
+.to-site__subtitle {
+  text-align: center;
+  color: $light-green;
+  font-family: 'Roboto-Medium', Arial, sans-serif;
+  margin-bottom: 60px;
+}
+
+.reviews__callback-form {
+  text-align: center;
+  margin-bottom: 68px;
+}
+
+
+.arrow-up {
+  display: block;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.down-arrow__icon--reversed {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+

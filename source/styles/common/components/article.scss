@@ -1,0 +1,21 @@
+.article {
+  border-bottom: 2px solid #ecebe4;
+  padding-bottom: 65px;
+  margin-bottom: 70px;
+}
+
+.article__title {
+  color: $main-font-color;
+  font-family: 'Sansus Webissimo', Arial, sans-serif;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.article__date {
+  color: $brand-green;
+  margin-bottom: 23px;
+}
+
+.article__text {
+  margin-bottom: 15px;
+}
