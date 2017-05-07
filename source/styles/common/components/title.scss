@@ -7,10 +7,31 @@
   position: relative;
   text-align: center;
 
+  margin-top: 0;
+  font-weight: normal;
+
+  @include tablets {
+    font-size: 49px;
+    line-height: 1.02;
+  }
+
+  @include phones {
+    font-size: 35px;
+    line-height: 1.48;
+  }
+
   &__svg-bg {
     @include centered();
     fill: rgba($brand-green, 0.1);
-    width: 100%;
+    width: 60%;
+
+    @include tablets {
+       width: 30%;
+    }
+
+    @include phones {
+      width: 60%;
+    }
   }
 
   &:after {
@@ -21,6 +42,10 @@
     width: 90px;
     height: 3px;
     margin-top: 15px;
+
+    @include phones {
+      margin-top: 0;
+    }
   }
 }
 

@@ -3,11 +3,15 @@
   background-color: rgba($dark-green, 0.7);
   padding: 0 20px;
   text-align: center;
+
+  @include phones {
+    width: 300px;
+  }
 }
 
 .login__title {
   color: #fff;
-  margin-bottom: 48px;
+  margin: 60px 0 48px;
 
   &:after {
     background: #fff;

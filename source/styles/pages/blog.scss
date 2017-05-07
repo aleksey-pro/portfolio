@@ -1,11 +1,15 @@
-.header {
+.blog-header{
   height: 440px;
+}
+
+.blog-arrow {
+  bottom: 50px !important;
 }
 
 .blog-name {
   color: #fff;
   position: static;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 
   &:after {
     background: #fff;
@@ -17,10 +21,19 @@
   background-color: $pale;
   padding: 60px 110px 0 45px;
   @extend %clearfix;
-  &:after {
-    content: '';
-    display: block;
-    height: 190px;
+
+  //&:after {
+  //  content: '';
+  //  display: block;
+  //  height: 190px;
+  //}
+
+  @include tablets {
+    padding: 50px 45px 0 25px;
+  }
+
+  @include phones {
+    padding: 35px 10px 0 10px;
   }
 }
 
@@ -28,6 +41,10 @@
   float: left;
   width: 35%;
   padding-right: 100px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .blog-items__item {
@@ -51,4 +68,12 @@
 .articles {
   float: right;
   width: 65%;
+  
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.blog-footer,.blog-footer-copy{
+  position: static;
 }

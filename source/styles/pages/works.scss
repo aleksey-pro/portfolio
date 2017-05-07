@@ -8,33 +8,86 @@
   position: relative;
   height: 185px;
   background: $white;
+
+  @include tablets {
+    height: 95px;
+  }
+
 }
 
 
 .portfolio-head__title {
   @include centered();
   margin: 0;
+
+  @include phones {
+    position: relative;
+  }
 }
 
 .portfolio__head-svg {
-  width: 510px;
-  height: 160px;
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 80%;
+  }
 }
 
-.portfolio__to-site, .portfolio__works {
+.works-blocks {
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.portfolio__to-site  {
   width: 50%;
   height: 755px;
-}
-
-.portfolio__to-site {
   position: relative;
   float: left;
   background-color: $olive;
+
+  @include tablets {
+    flex: 10 0 100%;
+    order: 2;
+    height: 270px;
+  }
 }
 
 .portfolio__works {
-  float: right;
+  width: 50%;
+  height: 530px;
+  float: left;
   background-color: $grey;
+
+  @include tablets {
+    flex: 1 0 100%;
+    order: 1;
+  }
+
+  @include phones {
+    height: auto;
+  }
+}
+
+
+.works-preview {
+  float: left;
+  width: 50%;
+  height: 225px;
+
+  @include tablets {
+    flex: 1 0 100%;
+    order: 3;
+  }
+
+  @include phones {
+    height: 90px;
+  }
+
 }
 
 .to-site {
@@ -42,32 +95,49 @@
   text-align: center;
 }
 
+.to-site__title {
+  margin-bottom: 60px;
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
+
+  @include phones {
+    font-size: 21px;
+  }
+}
+
 .to-site__subtitle {
   text-align: center;
   color: $light-green;
   font-family: 'Roboto-Medium', Arial, sans-serif;
   margin-bottom: 60px;
+
+  @include tablets {
+    margin-bottom: 30px;
+  }
+
 }
 
 .reviews__callback-form {
   text-align: center;
-  margin-bottom: 68px;
-}
+  padding-bottom: 68px;
 
+  @include phones {
+    padding-bottom: 35px;
+  }
+}
 
 .arrow-up {
   display: block;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+
+  @include phones {
+    margin-bottom: 200px;
+  }
 }
 
 .down-arrow__icon--reversed {
   transform: rotate(180deg);
 }
-
-
-
-
-
-
-

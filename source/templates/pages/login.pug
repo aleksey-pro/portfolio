@@ -30,5 +30,5 @@ block content
         mixin btns (href, name, cls)
             a(href=href class=`btn-nav__link ${cls}__link`)= name
         .login-nav.btn-nav
-            +btns('http://vk.com', 'На главную', 'login-nav')
-            +btns('http://vk.com', 'Войти', 'login-nav')
+            +btns('index.html', 'На главную', 'login-nav')
+            +btns('#', 'Войти', 'login-nav')

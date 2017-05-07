@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: "common",
+      name: "common",//склеивает только модули что нужны везде, после поля app common: '...,....'
       filename: "assets/js/common.js",
       minChunks: 2
      })

@@ -1,5 +1,12 @@
 .triangle {
   height: 100px;
+  position: absolute;
+  bottom: 100%;
+  width: 50%;
+
+  @include phones {
+    height: 50px;
+  }
 
   &--fill {
     &--olive {
@@ -7,6 +14,10 @@
     }
     &--beige {
       fill: $beige;
+
+      @include tablets {
+        fill: $olive;
+      }
     }
     &--yellow {
       fill: $white;
@@ -17,16 +28,10 @@
   }
 }
 
-.portfolio__triangle, .blog__triangle {
-  position: absolute;
-  bottom: 100%;
-  width: 50%;
-}
-
-.portfolio__triangle--left, .blog__triangle--left {
+.portfolio__triangle--left, .blog__triangle--left, .about-triangle--left {
   left: 0;
 }
 
-.portfolio__triangle--right, .blog__triangle--right {
+.portfolio__triangle--right, .blog__triangle--right, .about-triangle--right {
   right: 0;
 }

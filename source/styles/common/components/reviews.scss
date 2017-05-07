@@ -1,5 +1,5 @@
 .reviews  {
-  background: $beige url('../../assets/img/aboout_bg_1200.png') 0 0 no-repeat;
+  background: $beige url('../../assets/img/aboout_bg_1200.png') center center no-repeat;
   background-size: cover;
   @extend %clearfix;
   padding-top: 47px;
@@ -13,25 +13,51 @@
 .reviews__title {
   @extend %clearfix;
   margin-bottom: 60px;
+
+  @include phones {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__title-svg {
   height: 180px;
+
+  @include tablets {
+    width: 60% !important;
+  }
 }
 
 .reviews-list {
   text-align: center;
   margin-bottom: 67px;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 
 .reviews-list__container {
   display: inline-table;
+
+  @include phones {
+    display: block;
+  }
 }
 
 .reiews-list__item {
   display: table-cell;
   max-width: 400px;
   font-family: 'Roboto-Italic', Arial, sans-serif;
+  padding: 0 10px;
+
+  @include tablets {
+    padding: 0 20px;
+  }
+
+  @include phones {
+    display: block;
+    margin-bottom: 30px;
+  }
 
   .review__image {
     width: 78px;
@@ -67,6 +93,11 @@
     margin-bottom: 24px;
     position: relative;
 
+    @include phones {
+      margin-bottom: 10px;
+    }
+
+
     &:before {
       content: '';
       background: transparent url('../../assets/img/about__quotes.png') 0 0 no-repeat;
@@ -75,6 +106,11 @@
       height: 70px;
       position: absolute;
       bottom: 0;
+
+      @include phones {
+        bottom: 50%;
+      }
+
     }
   }
 }

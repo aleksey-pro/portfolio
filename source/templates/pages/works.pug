@@ -44,19 +44,20 @@ block content
                 use(xlink:href='assets/img/sprite.svg#pages--works--works_title')
             .title.portfolio-head__title
                 | Мои работы
-        .portfolio__to-site
-            .to-site
-                .subtitle.to-site__title
-                    | сайт школы онлайн-образования
-                .to-site__subtitle
-                    | HTML, CSS, JAVASCRIPT
-                .to-site__btn.button
-                    svg.button-icon
-                        use(xlink:href='assets/img/sprite.svg#components--button--link')
-                    span Посмотреть сайт
-        .portfolio__works
-            .works-slider
-                img(src='/assets/img/portfolio_slides.png' alt='works').works-slider__image
+        .works-blocks
+            .portfolio__to-site
+                .to-site
+                    .subtitle.to-site__title
+                        | сайт школы онлайн образования
+                    .to-site__subtitle
+                        | HTML, CSS, JAVASCRIPT
+                    .to-site__btn.button
+                        svg.button-icon
+                            use(xlink:href='assets/img/sprite.svg#components--button--link')
+                        span Посмотреть сайт
+            .portfolio__works
+                .works-slider
+                    img(src='/assets/img/portfolio_slides.png' alt='works').works-slider__image
             .works-preview
                 .works-preview__down
                     a(href='#').works-preview__link
@@ -84,8 +85,8 @@ block content
                 .review__prof= prof
         .reviews-list
             .reviews-list__container
-                +reviews(1, 'Этот парень проходил обучение веб-разработке не где-то, а в Loft', 'Ковальчук Дмитрий', '--основатель loftschool')
-                +reviews(2, 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на старых браузерах', 'Сабанцев Владимир', '--преподаватель loftschool')
+                +reviews(1, 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'Ковальчук Дмитрий', '--основатель loftschool')
+                +reviews(2, 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишко старых браузерах!', 'Сабанцев Владимир', '--преподаватель loftschool')
         .reviews__callback-form
             include ../common/contact-form
         a.arrow-up

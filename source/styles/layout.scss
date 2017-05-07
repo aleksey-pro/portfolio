@@ -38,6 +38,16 @@ body {
   color: $main-font-color;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
+
+  @include tablets {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @include phones {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .wrapper {
@@ -69,6 +79,11 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 

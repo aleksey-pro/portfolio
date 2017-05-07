@@ -5,7 +5,16 @@
   @include border-radius(5px);
   text-align: center;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 40px 20px 0;
+
+
+  @include tablets {
+    width: 300px;
+  }
+}
+
+.call__title {
+  margin-bottom: 60px;
 }
 
 .call-fields {

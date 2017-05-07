@@ -28,6 +28,13 @@
     text-align: center;
     text-decoration: none;
   }
+
+  @include phones {
+    right: 0;
+    top: 10px;
+    @include centered(x);
+  }
+
 }
 
 
@@ -36,6 +43,11 @@
   background-color: rgba($dark-green, 0.7);
   padding: 40px 65px 0;
   text-align: center;
+
+  @include phones {
+    width: 300px;
+    padding: 40px 35px 0;
+  }
 }
 
 .user__photo {
@@ -44,14 +56,28 @@
 
 .user__name {
   margin-bottom: 0;
+
+  @include tablets {
+    font-size: 28px;
+  }
+
+  @include phones {
+    font-size: 21px;
+  }
+
 }
 
-.user__desc, .socials {
+.user__desc, .welcome-socials {
   margin-bottom: 35px;
 }
 
 .user-nav {
   margin: 0 -65px;
+
+  @include phones {
+    margin: 0 -35px;
+  }
+
 }
 
 .user-nav__link {
@@ -67,4 +93,9 @@
   color: #fff;
   text-align: center;
   font-family: 'Roboto-Regular', Arial,sans-serif;
+
+
+  @include phones {
+    height: 48px;
+  }
 }
