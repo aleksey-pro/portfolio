@@ -1,0 +1,96 @@
+doctype html
+html(lang="ru-RU")
+    include ../common/head
+        block title Админ панель
+    body
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+    <![endif]-->
+    .wrapper.admin-wrapper
+        .admin-heading
+            .admin-heading__title Панель администрирования
+            a.admin-heading__back Вернуться на сайт
+        .admin-tabs
+            each tab in ['Обо мне', 'Блог', 'Мои работы', 'tab-4']
+                .admin-tabs__item
+                    a(class='admin-tabs__link' href='#')= tab
+        .admin-about
+            .admin-about__title Страница "Обо мне"
+            .admin-skills
+                .admin-skill
+                    .admin-skill__title Frontend
+                    .admin-skill__items
+                        .admin-skill__item
+                            .admin-skill__name HTML
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc %
+                        .admin-skill__item
+                            .admin-skill__name CSS
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                        .admin-skill__item
+                            .admin-skill__name JavaScript
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                .admin-skill
+                    .admin-skill__title Backend
+                    .admin-skill__items
+                        .admin-skill__item
+                            .admin-skill__name PHP
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                        .admin-skill__item
+                            .admin-skill__name Node.js
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                        .admin-skill__item
+                            .admin-skill__name Mongo.db
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                .admin-skill
+                    .admin-skill__title Workflow
+                    .admin-skill__items
+                        .admin-skill__item
+                            .admin-skill__name Gulp
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                        .admin-skill__item
+                            .admin-skill__name Git
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+                        .admin-skill__item
+                            .admin-skill__name Bower
+                            .admin-skill__value
+                                input.admin-skill__inp
+                            span.admin-skill__perc  %
+            a(href='#').save-btn.admin-btn Сохранить
+        //.admin-blog
+            .admin-blog__title Страница "Блог"
+            .admin-add
+                .admin-add__title Добавить запись
+                input(class='admin-add__input' type='text' name='name' placeholder='Название')
+                input(class='admin-add__input' type='date' name='date' placeholder='Дата')
+                textarea(class='admin-add__input' name='data' rows='6' placeholder='Содержание')
+            a(href='#').blog-btn.admin-btn Добавить
+        //.admin-works
+            .admin-works__title Страница "Мои работы"
+            .admin-work
+                .admin-work__title Добавить работу
+                input(class='admin-work__input' type='text' name='name' placeholder='Название проекта')
+                input(class='admin-work__input' type='text' name='tech' placeholder='Название технологии')
+                a(href='#').new-work-btn Загрузить картинку
+
+
+            a(href='#').works-btn.admin-btn Добавить
+    //.popup-layer
+        .admin-popup
+            .popup-msg Сообщение отправлено
+            .popup-btn  Закрыть
