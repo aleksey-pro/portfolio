@@ -90,19 +90,30 @@
   }
 }
 
+.admin-tabs .active {
+  background-color: #fff;
+}
 
-.admin-about, .admin-blog, .admin-works {
+.tabs-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
   background: #fff url('../../assets/img/admin-bg.jpg') center center no-repeat;
   background-size: cover;
-  display: flex;
-  flex: 8;
-  flex-direction: column;
-  justify-content: space-around;
   padding-left: 30px;
 
   @include phones {
     padding: 30px 10px 10px 10px;
   }
+
+}
+
+.admin-about, .admin-blog, .admin-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+
 }
 
 .admin-about__title, .admin-blog__title, .admin-works__title {
@@ -123,7 +134,7 @@
   color: $main-font-color;
 }
 
-.admin-skill__items {;
+.admin-skill__items {
   margin-bottom: 20px;
 }
 

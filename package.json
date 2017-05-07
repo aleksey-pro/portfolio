@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "author": "a.kalin",
   "license": "ISC",
-  "scripts": {},
+  "scripts": {
+    "lintcss": "stylelint ./source/styles/**/*.scss; exit 0",
+    "eslint": "eslint ./source/js/**/*.js; exit 0"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "~2.18.7",
     "del": "~2.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
     "favicons-webpack-plugin": "^0.0.7",
     "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "~3.1.1",
@@ -32,6 +37,9 @@
     "gulp.spritesmith": "^6.4.0",
     "jquery": "~3.1.1",
     "merge-stream": "^1.0.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-scss": "^1.4.4",
     "webpack": "^2.4.1",
     "webpack-stream": "^3.2.0"
   },
