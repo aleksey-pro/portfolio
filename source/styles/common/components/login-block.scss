@@ -10,11 +10,11 @@
 }
 
 .login__title {
-  color: #fff;
+  color: #fff !important;
   margin: 60px 0 48px;
 
   &:after {
-    background: #fff;
+    background: #fff !important;
   }
 }
 
@@ -35,11 +35,15 @@
 
 .login__lane {
   position: relative;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
 .login__icons {
   position: absolute;
   left: 0;
+  bottom: 0;
+  top: 0;
   background-color: #f0efe9;
   width: 45px;
   padding: 10px;
@@ -52,17 +56,11 @@
 
 .login__field {
   color: $brown;
-  margin-bottom: 16px;
-  padding: 15px 15px 15px 60px;
+  height: 40px;
+  padding-left: 50px;
   @include border-radius(20px);
   border: none;
   width: 100%;
   outline: none;
-}
-
-
-
-.login-nav {
-  margin: 0 -20px;
 }
 

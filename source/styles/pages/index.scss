@@ -4,13 +4,7 @@
   @extend %clearfix;
 }
 
-  //&:after {
-  //  content: '';
-  //  display: block;
-  //  height: 65px;
-  //}
-
-.welcome__login {
+.welcome__auth {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -27,6 +21,13 @@
     line-height: 45px;
     text-align: center;
     text-decoration: none;
+    transition: all .5s  ease-out;
+
+    &:hover {
+      background-color: #fff;
+      color: $main-font-color;
+    }
+
   }
 
   @include phones {
@@ -37,18 +38,27 @@
 
 }
 
+.login-block-wrapper {
+  @include centered();
+}
 
-.welcome__user {
-  width: 380px;
+.login-block {
   background-color: rgba($dark-green, 0.7);
-  padding: 40px 65px 0;
+  padding: 30px 10px 0 10px;
   text-align: center;
 
   @include phones {
     width: 300px;
-    padding: 40px 35px 0;
   }
 }
+
+.user-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 .user__photo {
   margin-bottom: 0;
@@ -68,17 +78,10 @@
 }
 
 .user__desc, .welcome-socials {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
-.user-nav {
-  margin: 0 -65px;
 
-  @include phones {
-    margin: 0 -35px;
-  }
-
-}
 
 .user-nav__link {
   width: 33.3%;
