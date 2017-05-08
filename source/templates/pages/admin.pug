@@ -1,10 +1,16 @@
 doctype html
 html(lang="ru-RU")
     include ../common/head
-        block title Админ панель
+        block title
+         title Админ панель
     body
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+    <![endif]-->
+    <!--[if lte IE 11]>
+    <style type="text/css">
+        .wrapper {width: 100%}
+    </style>
     <![endif]-->
     .wrapper.admin-wrapper
         .admin-heading

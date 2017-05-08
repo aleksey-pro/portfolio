@@ -1,16 +1,22 @@
 'use strict';
 
-
 var myModule = require('./myModule');
 var jTabsModule = require('./jTabs');
-var initMap = require('./map')
+var rotateModule = require('./rotate');
+var initMap = require('./map');
+var loadSVG = require('./loadSVG');
 
+
+var loadSVGs = new loadSVG();
 var myModuleInstance = new myModule();
+var jQueryTabs = new jTabsModule();
+var flipLogin = new rotateModule();
+var myMapsModule = new initMap();
+
 myModuleInstance.hello(); // 'hello!'
 myModuleInstance.goodbye(); // 'goodbye!'
 
-var jQueryTabs = new jTabsModule();
+loadSVGs.init();
 jQueryTabs.init();
-
-var myMapsModule = new initMap();
+flipLogin.init();
 myMapsModule.init();

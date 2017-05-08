@@ -18,6 +18,8 @@
   position: relative;
 }
 
+_:-ms-lang(x), .admin-wrapper { height: 100%; }
+
 .admin-heading {
   display: flex;
   flex: 1;

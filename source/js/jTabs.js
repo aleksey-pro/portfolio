@@ -1,5 +1,3 @@
-let $ = require('jquery');
-
 function jTabsModule() {
     
     let $wrapper = $('.admin-wrapper'),

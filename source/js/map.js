@@ -2,7 +2,7 @@ function initMap() {
   
   this.init = function(){
     google.maps.event.addDomListener(window, 'load', this.initM);
-  }
+  };
   
   this.initM = function(){
     // Basic options for a simple Google Map

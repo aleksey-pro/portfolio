@@ -21,16 +21,32 @@
   left: 0;
   width: 380px;
   height: 395px;
+  transition: transform 1.5s ease-in-out;
+}
+
+.login-frontside {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: perspective(1000px) rotateY(0deg);
 }
 
 .login-backside {
-  transform: rotateY(180deg);
+  transform: perspective(1000px) rotateY(180deg);
+  backface-visibility:hidden;
 }
 
-.flipper {
-  transform-origin: 190px 100%;
+//.flipper {
+//  transform-origin: 190px 100%;
+//}
+
+//.flip-container.active .flipper {
+//  transform: perspective(1000px) rotateY(-180deg);
+//}
+
+.flip-container.active .login-backside {
+  transform: perspective(1000px) rotateY(0deg);
 }
 
-.flip-container:hover .flipper {
-  transform: rotateY(-180deg);
+.flip-container.active .login-frontside {
+  transform: perspective(1000px) rotateY(180deg);
 }
