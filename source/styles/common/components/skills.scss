@@ -17,7 +17,7 @@
 }
 
 .skill-name {
-  @include centered();
+  @include centered-by-translate();
   font-size: 12px;
   text-align: center;
   background: transparent;

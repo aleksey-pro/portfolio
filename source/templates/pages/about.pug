@@ -5,16 +5,16 @@ block title
     title Обо мне
 
 block socials
-    .socials-block
+    .header__socials
         include ../common/socials
 
 block hamburger
-    a(href='#').hamburger-block
-        svg.hamburger-block__icon
+    a(href='#').header__trigger
+        svg.trigger-icon
             use(xlink:href='assets/img/sprite.svg#common--hamburger')
 
 block header__svg-title
-    svg.svg-title
+    svg.header__svg-title
         use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
 
 block arrow

@@ -115,7 +115,7 @@
 }
 
 .contacts {
-  @include centered();
+  @include centered-by-translate();
   padding-bottom: 195px;
 
   @include tablets {

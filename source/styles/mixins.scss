@@ -1,4 +1,4 @@
-@mixin centered($axis: 'both') {
+@mixin centered-by-translate($axis: 'both') {
   position: absolute;
 
   @if $axis == 'both' {
@@ -16,6 +16,14 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+@mixin centered-by-margin($m-left, $m-top) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: $m-left;
+  margin-top: $m-top;
 }
 
 %clearfix {

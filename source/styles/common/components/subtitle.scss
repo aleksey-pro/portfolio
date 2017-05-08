@@ -16,7 +16,7 @@
   &:after {
     content: "";
     display: block;
-    @include centered(x);
+    @include centered-by-translate(x);
     background: $main-font-color;
     width: 90px;
     height: 3px;

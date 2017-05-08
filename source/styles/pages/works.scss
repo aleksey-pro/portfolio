@@ -17,7 +17,7 @@
 
 
 .portfolio-head__title {
-  @include centered();
+  @include centered-by-translate();
   margin: 0;
 
   @include phones {
@@ -91,7 +91,7 @@
 }
 
 .to-site {
-  @include centered();
+  @include centered-by-translate();
   text-align: center;
 }
 

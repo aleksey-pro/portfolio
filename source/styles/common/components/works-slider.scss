@@ -11,7 +11,7 @@
     height: 310px;
     max-width: 100%;
     display: block;
-    @include centered();
+    @include centered-by-translate();
 
     @include tablets {
       height: 380px;
@@ -50,5 +50,5 @@
   width: 45px;
   height: 30px;
   fill: #fff;
-  @include centered();
+  @include centered-by-translate();
 }
