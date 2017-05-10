@@ -18,7 +18,7 @@ block arrow
             use(xlink:href='assets/img/sprite.svg#common--arrow_down')
 
 block header__svg-title
-    svg.header__svg-title
+    svg.svg-title.header__svg-title
         use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
 
 block user-text
@@ -68,6 +68,8 @@ block content
                         svg.works-preview__icon
                             use(xlink:href='assets/img/sprite.svg#components--portfolio--portf_arrow_up')
      section.reviews
+        .reviews__blur-back
+            img(class='reviews__img blur-background' src='../../assets/img/aboout_bg_1200.png' alt='works')
         .reviews__title.title
              | что обо мне
              |

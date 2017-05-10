@@ -1,13 +1,29 @@
 .reviews  {
-  background: $beige url('../../assets/img/aboout_bg_1200.png') center center no-repeat;
-  background-size: cover;
+  position: relative;
   @extend %clearfix;
   padding-top: 47px;
+
   &:after {
     content: '';
     display: block;
     height: 190px;
   }
+}
+
+.reviews__blur-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 1200px;
+}
+
+.reviews__img {
+  width: 100%;
+  height: 100%;
+  display:block;
 }
 
 .reviews__title {

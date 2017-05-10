@@ -8,13 +8,12 @@ html(lang="ru-RU")
     .wrapper
         //Шапка
         header.header.blog-header
+            .header__bg.blog-header
             block socials
             block hamburger
-            block arrow
             .header__title
                 block header__svg-title
-                .user-block
-                    include common/user
+                include common/user
         //-Контент
         block content
     footer.footer.blog-footer

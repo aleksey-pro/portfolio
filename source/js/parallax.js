@@ -2,7 +2,8 @@ function parallax() {
   
   var bg = document.querySelector('.header__bg'),
     title = document.querySelector('.header__title'),
-    svgBG = document.querySelector('.header__svg-title');
+    svgBG = document.querySelector('.svg-title');
+
   
   return {
     move: function (block, windowScroll, strafeAmount) {
@@ -18,8 +19,8 @@ function parallax() {
     
     init: function (wScroll) {
       this.move(bg, wScroll, -20);
-      this.move(title, wScroll, 2);
-      this.move(svgBG, wScroll, 30);
+      this.move(title, wScroll, 5);
+      this.move(svgBG, wScroll, -7);
     }
   }
   

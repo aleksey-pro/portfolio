@@ -28,29 +28,23 @@
 }
 
 .header__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   height: 200px;
-  width: 210px;
-  margin-top: -100px;
-  margin-left: -105px;
+  width: 70%;
+  @include centered-by-margin(-35%, -100px);
+}
+
+.svg-title {
+  fill: rgba(255, 255, 255, 0.2);
 }
 
 .header__svg-title {
   width: 62%;
   height: 230px;
-  fill: rgba(255, 255, 255, 0.2);
   @include centered-by-margin(-31%, -115px);
 }
 
 .blog__svg-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -35%);
-  z-index: -100;
-
+  @include centered-by-margin(-50%, 0);
+  width: 100%;
   height: 190px;
-  fill: rgba(255, 255, 255, 0.2);
 }

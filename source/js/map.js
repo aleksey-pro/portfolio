@@ -1,7 +1,9 @@
 function initMap() {
   
   this.init = function(){
-    google.maps.event.addDomListener(window, 'load', this.initM);
+    if(google) {
+      google.maps.event.addDomListener(window, 'load', this.initM);
+    } else console.log('no google');
   };
   
   this.initM = function(){
