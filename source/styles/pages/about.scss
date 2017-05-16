@@ -69,7 +69,7 @@
   }
 
   &__text {
-    margin: 0 8px 55px;
+    margin: 0 8px 10px;
 
     @include tablets {
       margin: 0 140px;
@@ -86,7 +86,6 @@
 }
 
 .about-data__content {
-  color: $brand-green;
   display: flex;
 
   @include tablets {
@@ -107,7 +106,7 @@
 
 #map {
   width: 100%;
-  height: 965px;
+  height: 960px;
 }
 
 .gmnoprint span, .gmnoprint a, .gm-style-cc a {

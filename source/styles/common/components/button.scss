@@ -1,5 +1,5 @@
 .button {
-  display: inline-block;
+  display: none;
   width: 200px;
   height: 45px;
   line-height: 45px;
@@ -20,4 +20,8 @@
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.works__links-btn-active {
+  display: inline-block;
 }

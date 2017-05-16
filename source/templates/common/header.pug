@@ -1,9 +1,14 @@
 header.header
     .header__bg
-    block socials
-    block hamburger
-    block arrow
-    block header__svg-title
+    .header__socials
+        include socials
+    .header__trigger
+        a(href='#').header__trigger-link
+            span.header__trigger--middle
+    a(href="#").down-arrow
+        svg.down-arrow__icon
+            use(xlink:href='assets/img/sprite.svg#common--arrow_down')
+    svg.svg-title.header__svg-title
+        use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
     .header__title
-        .user-block
-            include user
+        include user

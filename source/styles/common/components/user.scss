@@ -5,9 +5,13 @@
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     overflow: hidden;
     display: inline-block;
+  }
+
+  &__photo-avatar {
+    width: 100%;
   }
 
   &__name {

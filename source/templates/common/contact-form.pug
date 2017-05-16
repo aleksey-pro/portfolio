@@ -9,10 +9,11 @@
             form.call-fields__form
                 +inputs('text','Имя', 'name')
                 +inputs('text','Email', 'email')
-                textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='5').call-fields__field
+                textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='6').call-fields__field
 
-            mixin btns(href, name)
-                a(href=href class='btn-nav__link')= name
-            .call-nav.btn-nav
-                +btns('#','Отправить')
-                +btns('#','Очистить')
+            mixin btns(href, name, cls)
+                a(href=href class=`user-nav__item ${cls}__item`)
+                    span.user-nav__link= name
+        nav.user-nav.contact-nav
+            +btns('#','Отправить','contact-nav')
+            +btns('#','Очистить','contact-nav')

@@ -4,6 +4,10 @@
   height: 395px;
   position: relative;
 
+  @include tablets {
+    width: 350px;
+  }
+
   @include phones {
     width: 300px;
   }
@@ -20,8 +24,14 @@
   top: 0;
   left: 0;
   width: 380px;
-  height: 395px;
+  height: 425px;
   transition: transform 1.5s ease-in-out;
+
+  @include tablets {
+    width: 350px;
+    height: 395px;
+  }
+
 }
 
 .login-frontside {

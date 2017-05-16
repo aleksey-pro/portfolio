@@ -1,0 +1,42 @@
+.user-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.contact-nav {
+  position: static;
+  margin: 0 -20px;
+}
+
+.user-nav__item {
+  border-left: solid 2px #a2bd9d;
+  padding: 12px 0;
+  width: 30%;
+  background-color: $light-green;
+  display: block;
+  float: left;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    background-color: $brand-green;
+  }
+}
+
+.welcome-nav--wide__item {
+  width: 40%;
+}
+
+.user-nav__link {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.login-nav__item, .contact-nav__item{
+  width: 50%;
+}

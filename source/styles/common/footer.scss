@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   background-color: rgba(#373e42, 0.8);
   color: #fff;
   overflow: hidden;
@@ -17,7 +17,7 @@
     float: left;
     width: 33.33%;
     margin: 30px 0;
-    padding: 0 15px;
+    padding: 0 5px 0 30px;
     position: relative;
 
     @include tablets {

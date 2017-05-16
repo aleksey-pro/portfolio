@@ -18,7 +18,7 @@
   color: $main-font-color;
   font-family: 'Sansus Webissimo', Arial, sans-serif;
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @include tablets {
     font-size: 30px;
@@ -34,7 +34,7 @@
 
 .article__date {
   color: $brand-green;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   @include tablets {
     margin-bottom: 18px;

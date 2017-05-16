@@ -1,21 +1,28 @@
 'use strict';
 
-var myModule = require('./myModule');
-var jTabsModule = require('./jTabs');
-var rotateModule = require('./rotate');
-var parallaxModule = require('./parallax');
-var initMap = require('./map');
-var loadSVG = require('./loadSVG');
-var blur = require('./blur');
+const myModule = require('./myModule');
+const jTabsModule = require('./jTabs');
+const rotateModule = require('./rotate');
+const parallaxModule = require('./parallax');
+const initMap = require('./map');
+const loadSVG = require('./loadSVG');
+const blur = require('./blur');
+const preload = require('./preload');
+const slide = require('./slide-menu');
+const works = require('./slider');
 
 
-var loadSVGs = new loadSVG();
-var myModuleInstance = new myModule();
-var jQueryTabs = new jTabsModule();
-var flipLogin = new rotateModule();
-var parallax = new parallaxModule();
-var myMapsModule = new initMap();
-var blurEffect = new blur();
+const loadSVGs = new loadSVG();
+const myModuleInstance = new myModule();
+const jQueryTabs = new jTabsModule();
+const flipLogin = new rotateModule();
+const parallax = new parallaxModule();
+const myMapsModule = new initMap();
+const blurEffect = new blur();
+const slideMenu = new slide();
+const preloader = new preload();
+const slider = new works();
+
 
 
 myModuleInstance.hello(); // 'hello!'
@@ -23,16 +30,31 @@ myModuleInstance.goodbye(); // 'goodbye!'
 
 loadSVGs.init();
 jQueryTabs.init();
+slider.init();
 
-blurEffect.init();
-window.onresize =function(){
+if(document.body.classList.contains('hasSlideMenu')) {
+  slideMenu.init();
+}
+
+preloader.init();
+
+if(document.body.classList.contains('hasBlur')) {
   blurEffect.init();
-};
+  window.onresize =function(){
+    blurEffect.init();
+  };
+}
 
 window.onscroll = function() {
-  var wScroll = window.pageYOffset;
+  let wScroll = window.pageYOffset;
   parallax.init(wScroll);
 };
 
 flipLogin.init();
-myMapsModule.init();
+
+if(document.body.classList.contains('hasMap')) {
+  myMapsModule.init();
+}
+
+
+

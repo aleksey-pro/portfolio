@@ -1,12 +1,10 @@
 function initMap() {
   
-  this.init = function(){
-    if(google) {
-      google.maps.event.addDomListener(window, 'load', this.initM);
-    } else console.log('no google');
+  this.init = function () {
+    google.maps.event.addDomListener(window, 'load', this.initM);
   };
   
-  this.initM = function(){
+  this.initM = function () {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
@@ -14,12 +12,12 @@ function initMap() {
       zoom: 11,
       
       disableDefaultUI: true,
-    
+      
       // The latitude and longitude to center the map (always required)
       center: new google.maps.LatLng(59.91, 29.93),
-  
+      
       scrollwheel: false,
-    
+      
       // How you would like to style the map.
       // https://snazzymaps.com/editor
       styles: [
@@ -106,10 +104,10 @@ function initMap() {
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
-  
+    
     // Create the Google Map using our element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-  
+    
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(59.91, 29.73),
@@ -118,5 +116,6 @@ function initMap() {
     });
   }
 }
+
 
 module.exports = initMap;

@@ -1,5 +1,9 @@
 .blog-header{
   height: 440px;
+
+  .user__name, .header__desc {
+    display: none;
+  }
 }
 
 .blog-arrow {
@@ -19,14 +23,8 @@
 .blog-content {
   position: relative;
   background-color: $pale;
-  padding: 60px 110px 0 45px;
+  padding: 50px 110px 0 45px;
   @extend %clearfix;
-
-  //&:after {
-  //  content: '';
-  //  display: block;
-  //  height: 190px;
-  //}
 
   @include tablets {
     padding: 50px 45px 0 25px;
@@ -49,7 +47,7 @@
 
 .blog-items__item {
   display: block;
-  padding: 20px 10px 15px;
+  padding: 20px 10px 10px;
   text-align: right;
   box-sizing: content-box;
   border-right: 3px solid transparent;

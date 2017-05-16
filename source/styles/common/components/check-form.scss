@@ -68,17 +68,31 @@ input#no:checked ~ label.choose-label--no {
   color: $light-green;
 }
 
-input#yes:checked ~ #radio-yes::before {
+input#yes:checked ~ #radio-yes::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: #fff url('../../assets/img/round.svg') center center no-repeat;
+  background-color: #fff;
   background-size: contain;
   border-radius: 50%;
 }
+
+input#yes:checked ~ #radio-yes::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  z-index: 10;
+  background-color: #6c9c5a;
+  background-size: contain;
+  border-radius: 50%;
+}
+
 
 input#no:checked ~ #radio-no::before {
   content: "";
@@ -87,7 +101,17 @@ input#no:checked ~ #radio-no::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #fff url('../../assets/img/check.svg') center center no-repeat;
-  background-size: contain;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+input#no:checked ~ #radio-no::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background-color: #6c9c5a;
   border-radius: 50%;
 }
