@@ -43,19 +43,19 @@ html(lang="ru-RU")
                             .works__list-subtitle
                                 | HTML, CSS, JAVASCRIPT
                             ul.works__links
-                                a.works__links-btn.button.works__links-btn-active
+                                a(target='blank').works__links-btn.button.works__links-btn-active
                                     svg.button-icon
                                         use(xlink:href='assets/img/sprite.svg#components--button--link')
                                         span Посмотреть сайт
-                                a.works__links-btn.button
+                                a(target='blank').works__links-btn.button
                                     svg.button-icon
                                         use(xlink:href='assets/img/sprite.svg#components--button--link')
                                         span Посмотреть сайт
-                                a.works__links-btn.button
+                                a(target='blank').works__links-btn.button
                                     svg.button-icon
                                         use(xlink:href='assets/img/sprite.svg#components--button--link')
                                         span Посмотреть сайт
-                                a.works__links-btn.button
+                                a(target='blank').works__links-btn.button
                                     svg.button-icon
                                         use(xlink:href='assets/img/sprite.svg#components--button--link')
                                         span Посмотреть сайт
@@ -117,7 +117,4 @@ html(lang="ru-RU")
                         use(xlink:href='assets/img/sprite.svg#common--arrow_down')
             //Подвал
             include  ../common/footer
-            .preloader
-                .preloader__spinner
-                    .preloader__animation
-                    .preloader__percents
+            include  ../common/preloader

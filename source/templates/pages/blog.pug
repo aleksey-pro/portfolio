@@ -4,7 +4,7 @@ html(lang="ru-RU")
     include ../common/head
         block title
             title Страница для блога
-    body
+    body.hasMenu
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
     <![endif]-->
@@ -91,4 +91,4 @@ html(lang="ru-RU")
             .footer__quote-name
                 | --Martin Golding
     section.footer-copy.blog-footer-copy &copy; Алексей Исаев| Создано с любовью в LoftSchool | 2017
-
+    include  ../common/preloader

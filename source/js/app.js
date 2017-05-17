@@ -32,9 +32,12 @@ const blogMenu = new blog();
 
 loadSVGs.init();
 jQueryTabs.init();
-blogMenu.init();
+
 slider.init();
 
+if(document.body.classList.contains('hasMenu')) {
+  blogMenu.init();
+}
 
 if(document.body.classList.contains('hasSlideMenu')) {
   slideMenu.init();
