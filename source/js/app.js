@@ -1,6 +1,6 @@
 'use strict';
 
-const myModule = require('./myModule');
+// const myModule = require('./myModule');
 const jTabsModule = require('./jTabs');
 const rotateModule = require('./rotate');
 const parallaxModule = require('./parallax');
@@ -13,7 +13,7 @@ const works = require('./slider');
 
 
 const loadSVGs = new loadSVG();
-const myModuleInstance = new myModule();
+// const myModuleInstance = new myModule();
 const jQueryTabs = new jTabsModule();
 const flipLogin = new rotateModule();
 const parallax = new parallaxModule();
@@ -25,8 +25,8 @@ const slider = new works();
 
 
 
-myModuleInstance.hello(); // 'hello!'
-myModuleInstance.goodbye(); // 'goodbye!'
+//myModuleInstance.hello();  'hello!'
+//myModuleInstance.goodbye();  'goodbye!'
 
 loadSVGs.init();
 jQueryTabs.init();
