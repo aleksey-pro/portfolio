@@ -10,6 +10,7 @@ const blur = require('./blur');
 const preload = require('./preload');
 const slide = require('./slide-menu');
 const works = require('./slider');
+const blog = require('./blog-menu');
 
 
 const loadSVGs = new loadSVG();
@@ -22,6 +23,7 @@ const blurEffect = new blur();
 const slideMenu = new slide();
 const preloader = new preload();
 const slider = new works();
+const blogMenu = new blog();
 
 
 
@@ -30,7 +32,9 @@ const slider = new works();
 
 loadSVGs.init();
 jQueryTabs.init();
+blogMenu.init();
 slider.init();
+
 
 if(document.body.classList.contains('hasSlideMenu')) {
   slideMenu.init();
