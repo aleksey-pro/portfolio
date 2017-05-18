@@ -5,7 +5,7 @@ const jTabsModule = require('./jTabs');
 const rotateModule = require('./rotate');
 const parallaxModule = require('./parallax');
 const initMap = require('./map');
-const loadSVG = require('./loadSVG');
+const loadPolyfills = require('./loadPolyfills');
 const blur = require('./blur');
 const preload = require('./preload');
 const slide = require('./slide-menu');
@@ -14,7 +14,7 @@ const blog = require('./blog-menu');
 const water = require('../WebGL/index-water');
 
 
-const loadSVGs = new loadSVG();
+const loadPoly = new loadPolyfills();
 // const myModuleInstance = new myModule();
 const jQueryTabs = new jTabsModule();
 const flipLogin = new rotateModule();
@@ -32,7 +32,7 @@ const WebGL = new water();
 //myModuleInstance.hello();  'hello!'
 //myModuleInstance.goodbye();  'goodbye!'
 
-loadSVGs.init();
+loadPoly.init();
 jQueryTabs.init();
 
 slider.init();

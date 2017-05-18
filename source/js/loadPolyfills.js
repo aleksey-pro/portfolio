@@ -1,4 +1,5 @@
 var svg = require('svg4everybody');
+require('es6-promise').polyfill();
 
 function loadSVG() {
   function loadSVGs() {
