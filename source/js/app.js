@@ -11,6 +11,7 @@ const preload = require('./preload');
 const slide = require('./slide-menu');
 const works = require('./slider');
 const blog = require('./blog-menu');
+const water = require('../WebGL/index-water');
 
 
 const loadSVGs = new loadSVG();
@@ -24,6 +25,7 @@ const slideMenu = new slide();
 const preloader = new preload();
 const slider = new works();
 const blogMenu = new blog();
+const WebGL = new water();
 
 
 
@@ -34,6 +36,10 @@ loadSVGs.init();
 jQueryTabs.init();
 
 slider.init();
+
+if(document.body.classList.contains('hasWebGL')) {
+  WebGL.init();
+}
 
 if(document.body.classList.contains('hasMenu')) {
   blogMenu.init();

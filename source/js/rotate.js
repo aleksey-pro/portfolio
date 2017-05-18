@@ -2,13 +2,13 @@ function rotateModule() {
   
   let button = document.querySelector('.welcome__auth');
   
-  _rotateIt = function() {
+  var _rotateIt = function() {
     let container = document.querySelector('.flip-container');
     container.classList.add('active');
     button.style.display = 'none';
   };
   
-  _setUpListeners = function() {
+  var _setUpListeners = function() {
     if(button) {
       button.addEventListener('click', _rotateIt);
     }

@@ -1,13 +1,15 @@
 doctype html
 html(lang="ru-RU")
     include common/head
-    body
+    body.hasWebGL
     <!--[if lt IE 9]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
     <![endif]-->
         .wrapper.welcome
-            //-Контент
-            block content
+           .Background
+               canvas.Background-canvas
+        //-Контент
+        block content
             //-Подвал
         footer.footer-welcome
             | &copy; Алексей Исаев | Создано с любовью в LoftSchool | 2017
