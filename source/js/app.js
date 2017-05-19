@@ -34,12 +34,9 @@ const WebGL = new water();
 
 loadPoly.init();
 jQueryTabs.init();
-
 slider.init();
+WebGL.init();
 
-if(document.body.classList.contains('hasWebGL')) {
-  WebGL.init();
-}
 
 if(document.body.classList.contains('hasMenu')) {
   blogMenu.init();

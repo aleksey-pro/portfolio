@@ -17,6 +17,7 @@
   background-color: $light-green;
   display: block;
   float: left;
+  text-decoration: none;
 
   &:first-child {
     border-left: none;
@@ -33,7 +34,6 @@
 
 .user-nav__link {
   color: #fff;
-  text-decoration: none;
   text-align: center;
 }
 

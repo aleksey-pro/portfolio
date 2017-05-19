@@ -6,11 +6,11 @@ function parallax() {
 
   
   return {
-    move: function (block, windowScroll, strafeAmount) {
+    move: function (el, windowScroll, strafeAmount) {
       var strafe = windowScroll / -strafeAmount + '%';
       var transformString = 'translate3d(0, '+ strafe +' , 0)';
       
-      var style = block.style;
+      var style = el.style;
       
       style.transform = transformString;
       style.webkitTransform = transformString;
