@@ -1,4 +1,4 @@
-.works-slider {
+.slider__active {
   position: relative;
   height: 530px;
 
@@ -7,11 +7,11 @@
   }
 
 
-  .works-slider__image {
+  .slider__active-image {
     height: 310px;
     max-width: 100%;
     display: block;
-    @include centered();
+    @include centered-by-translate();
 
     @include tablets {
       height: 380px;
@@ -22,33 +22,49 @@
   }
 }
 
-.works-preview__down, .works-preview__up {
+.slider__btns {
+  overflow: hidden;
+}
+
+.slider__btn {
   width: 50%;
-  height: 225px;
-  background-size: cover;
   float: left;
   position: relative;
+  height: 225px;
+
 
   @include phones {
     height: 90px;
   }
 }
 
-.works-preview__down {
-  background: $grey url('../../assets/img/portfolio-downslide.jpg') center  center  no-repeat;
+.slider__btn.btn-down {
+  background-color: gray;
   opacity: 0.5;
-  background-size: contain;
 }
 
-.works-preview__up {
-  background: $grey url('../../assets/img/portfolio-upslide.jpg') center  center  no-repeat;
-  opacity: 0.5;
-  background-size: contain;
+.slider__btn.btn-up {
+  background-color: gray;
+  opacity: 0.4;
 }
 
-.works-preview__icon {
+.slider__btn-icon {
   width: 45px;
   height: 30px;
   fill: #fff;
-  @include centered();
+  @include centered-by-translate();
+  z-index: 100;
+}
+
+.slider__item {
+  position: absolute;
+  height: 225px;
+  text-align: center;
+  width: 100%;
+}
+
+.slider__item-pic {
+  width: 150px;
+  height: 100%;
+  margin: 0 20px;
 }

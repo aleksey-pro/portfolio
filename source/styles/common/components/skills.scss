@@ -8,16 +8,16 @@
   position: relative;
   width: 110px;
   height: 110px;
-  margin-right: 28px;
+  margin-right: 32px;
 
-  &:first-child {
-    margin-left: 0;
+  &:last-child {
+    margin-right: 0;
   }
 
 }
 
 .skill-name {
-  @include centered();
+  @include centered-by-translate();
   font-size: 12px;
   text-align: center;
   background: transparent;

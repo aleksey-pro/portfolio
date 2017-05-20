@@ -6,6 +6,7 @@
   display: block;
   position: relative;
   text-align: center;
+  line-height: 1.15;
 
   margin-top: 0;
   font-weight: normal;
@@ -21,7 +22,7 @@
   }
 
   &__svg-bg {
-    @include centered();
+    @include centered-by-translate();
     fill: rgba($brand-green, 0.1);
     width: 60%;
 
@@ -37,7 +38,7 @@
   &:after {
     content: "";
     display: block;
-    @include centered(x);
+    @include centered-by-translate(x);
     background: $main-font-color;
     width: 90px;
     height: 3px;

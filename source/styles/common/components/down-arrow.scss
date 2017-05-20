@@ -1,7 +1,7 @@
 .down-arrow {
   bottom: 70px;
-  @include centered(x);
-  z-index: 10000;
+  @include centered-by-translate(x);
+  z-index: 100;
 }
 
 .down-arrow__icon {

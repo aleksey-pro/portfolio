@@ -1,5 +1,9 @@
 .blog-header{
   height: 440px;
+
+  .user__name, .header__desc {
+    display: none;
+  }
 }
 
 .blog-arrow {
@@ -19,14 +23,8 @@
 .blog-content {
   position: relative;
   background-color: $pale;
-  padding: 60px 110px 0 45px;
+  padding: 50px 110px 0 45px;
   @extend %clearfix;
-
-  //&:after {
-  //  content: '';
-  //  display: block;
-  //  height: 190px;
-  //}
 
   @include tablets {
     padding: 50px 45px 0 25px;
@@ -40,16 +38,51 @@
 .blog-nav {
   float: left;
   width: 35%;
-  padding-right: 100px;
+  padding-right: 80px;
+  position: relative;
 
   @include tablets {
-    display: none;
+    transform: translate(-110%);
+    position: absolute;
+  }
+
+  @include phones {
+    transform: translate(-105%);
+    position: absolute;
+  }
+
+
+  @include phones {
+    width: 85%;
+  }
+
+  &--opened {
+    transform: translate(-10%);
+    position: static;
+    background-color: $brand-green;
+    padding-right: 20px;
+
+    .blog-items__link {
+      color: #fff;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    width: 280px;
+
+    @include tablets {
+      width: 230px;
+    }
   }
 }
 
+
+
 .blog-items__item {
   display: block;
-  padding: 20px 10px 15px;
+  padding: 20px 10px 10px;
   text-align: right;
   box-sizing: content-box;
   border-right: 3px solid transparent;
@@ -65,6 +98,22 @@
   text-decoration: none;
 }
 
+.tail {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  height: 30px;
+  width: 15px;
+  background-color: $brand-green;
+  border-radius: 0 50% 50% 0;
+
+  @include tablets {
+    display: block;
+  }
+}
+
 .articles {
   float: right;
   width: 65%;
@@ -76,4 +125,12 @@
 
 .blog-footer,.blog-footer-copy{
   position: static;
+}
+
+.articles--collapsed {
+  width: 65%;
+
+  @include phones {
+    width: 15%;
+  }
 }

@@ -1,12 +1,22 @@
 .header{
   @extend %clearfix;
-  height: 600px;
   position: relative;
-  background: #fff url('../../assets/img/header-bg.jpg') center center no-repeat;
-  background-size: cover;
+  height: 600px;
+  overflow: hidden;
 }
 
-.socials-block {
+.header__bg {
+  background: #fff url('../../assets/img/header-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 600px;
+}
+
+
+.header__socials {
   position: absolute;
   left: 30px;
   top: 35px;
@@ -19,26 +29,29 @@
 }
 
 .header__title {
-  @include centered(y);
-  text-align: center;
-  width: 100%;
+  height: 280px;
+  width: 70%;
+  @include centered-by-margin(-35%, -140px);
 }
 
 .svg-title {
-  @include centered();
-  width: 63%;
-  height: 230px;
   fill: rgba(255, 255, 255, 0.2);
-  z-index: -100;
+}
+
+.header__svg-title {
+  width: 100%;
+  height: 230px;
+  @include centered-by-margin(-50%, -115px);
 }
 
 .blog__svg-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -35%);
-  z-index: -100;
-
+  @include centered-by-margin(-50%, -5%);
+  width: 100%;
   height: 190px;
-  fill: rgba(255, 255, 255, 0.2);
 }
+
+.header__desc {
+  text-align: center;
+  color: #fff;
+}
+

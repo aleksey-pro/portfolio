@@ -9,7 +9,9 @@ function rotateModule() {
   };
   
   _setUpListeners = function() {
-    button.addEventListener('click', _rotateIt);
+    if(button) {
+      button.addEventListener('click', _rotateIt);
+    }
   };
   
   this.init = function() {

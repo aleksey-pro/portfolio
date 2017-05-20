@@ -17,7 +17,7 @@
 
 
 .portfolio-head__title {
-  @include centered();
+  @include centered-by-translate();
   margin: 0;
 
   @include phones {
@@ -36,14 +36,14 @@
   }
 }
 
-.works-blocks {
+.slider {
   @include tablets {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.portfolio__to-site  {
+.slider__left  {
   width: 50%;
   height: 755px;
   position: relative;
@@ -57,7 +57,7 @@
   }
 }
 
-.portfolio__works {
+.slider__right {
   width: 50%;
   height: 530px;
   float: left;
@@ -74,7 +74,7 @@
 }
 
 
-.works-preview {
+.slider__btns {
   float: left;
   width: 50%;
   height: 225px;
@@ -90,12 +90,42 @@
 
 }
 
-.to-site {
-  @include centered();
+.works {
+  @include centered-by-translate();
   text-align: center;
 }
 
-.to-site__title {
+.works__list {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 300px;
+
+  @include tablets {
+    height: auto;
+  }
+}
+
+.work-sample {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__list-down .slider__item {
+  top: -225px;
+}
+.slider__list-up .slider__item {
+  top: 225px;
+}
+.slider__item.active {
+  top: 0;
+}
+
+
+.works__sample__title {
   margin-bottom: 60px;
 
   @include tablets {
@@ -107,7 +137,7 @@
   }
 }
 
-.to-site__subtitle {
+.works__list-subtitle {
   text-align: center;
   color: $light-green;
   font-family: 'Roboto-Medium', Arial, sans-serif;
@@ -121,7 +151,7 @@
 
 .reviews__callback-form {
   text-align: center;
-  padding-bottom: 68px;
+  padding: 20px 0 60px;
 
   @include phones {
     padding-bottom: 35px;
@@ -131,7 +161,7 @@
 .arrow-up {
   display: block;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 55px;
 
   @include phones {
     margin-bottom: 200px;
