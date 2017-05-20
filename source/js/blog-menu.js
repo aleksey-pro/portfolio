@@ -22,26 +22,47 @@ function blogModule() {
     })
   }
   
-  function _toSection(e) {
-    e.preventDefault();
-    var $article = $('.article');
-    var source = $(this).attr('href');
-    window.location.hash = source;
-
-    var articlePOs = $article.offset().top;
-    var scrolled = $(window).scrollTop();
-    
-    
-    // console.log(articlePOs);
-    // var reqPos = scrollTo.offset().top;
-    //
-    // $('body, html').animate({scrollTop: reqPos}, 500);
+  function _scrolling() {
+    var lastId, topMenu = $('.blog-items'),
+      topPadding = 50,
+      menuItems = topMenu.find('.blog-items__link'),
+      scrollItems = menuItems.map(function () {
+        var item = $($(this).attr('href'));
+        if (item.length) {return item;}
+      });
+  
+    menuItems.on('click', function(e){
+      e.preventDefault();
+      var href = $(this).attr('href');
+      var offsetTop = href === '#' ? 0 : $(href).offset().top;
+      window.location.hash = href;
+      $('body, html').stop().animate({scrollTop: offsetTop}, 500);
+    });
+  
+    $(window).scroll(function(){
+      var fromTop = $(this).scrollTop() + topPadding;
+      var cur = scrollItems.map(function(){
+        if ($(this).offset().top < fromTop)
+          return this;
+      });
+      
+      cur = cur[cur.length-1];
+      var id = cur && cur.length ? cur[0].id : "";
+      if (lastId !== id) {
+        lastId = id;
+        menuItems.closest('.blog-items__item').removeClass("blog-items__item--green");
+        var activeItem = menuItems.filter("[href='#"+id+"']");
+        activeItem.closest('.blog-items__item').addClass("blog-items__item--green");
+      }
+    });
   }
+
+  
   
   
   function init() {
     _stickyMenu();
-    link.on('click', _toSection);
+    _scrolling();
     label.on('click', function(e) {
       e.preventDefault();
       _push();

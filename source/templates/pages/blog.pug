@@ -2,8 +2,8 @@ doctype html
 html(lang="ru-RU")
 
     include ../common/head
-        block title
-            title Страница для блога
+    block title
+        title Страница для блога
     body.hasMenu
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
@@ -34,28 +34,19 @@ html(lang="ru-RU")
             class="triangle blog__triangle blog__triangle--right")
                 polygon(points="0,100 1000,100 1000,0").triangle.triangle--fill--navajo
             aside.blog-nav
-                -var article1 = 'Самое важное в SASS';
-                -var article2 = 'Приёмы в верстке, без которых не обходитя ни один сайт';
-                -var article3 = 'Самый необходимый набор Gulp плагинов';
-                -var article4 = 'Почему я выбрал Pug';
-                -var id1 = 'article1';
-                -var id2 = 'article2';
-                -var id3 = 'article3';
-                -var id4 = 'article4';
-
-                mixin link(link, name)
-                    li.blog-items__item
-                        a(href='#'+link class='blog-items__link')= name
                 ul.blog-items
-                    +link(id1, article1)
-                    +link(id2, article2)
-                    +link(id3, article3)
-                    +link(id4, article4)
-
+                    li.blog-items__item.blog-items__item--green
+                        a(href='#article1' class='blog-items__link') Самое важное в SASS
+                    li.blog-items__item
+                        a(href='#article2' class='blog-items__link') Приёмы в верстке, без которых не обходитя ни один сайт
+                    li.blog-items__item
+                        a(href='#article3' class='blog-items__link') Самый необходимый набор Gulp плагинов
+                    li.blog-items__item
+                        a(href='#article4' class='blog-items__link') Почему я выбрал Pug
                 a(href='#').tail
 
             section.articles
-                article(class='article' data-section='article1')
+                article(class='article' id='article1')
                     .article__title
                         | Самое важное в SASS
                     .article__date
@@ -64,7 +55,7 @@ html(lang="ru-RU")
                     p.article__text Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
                     p(data-height="282" data-theme-id="0" data-slug-hash="apLobB" data-default-tab="js" data-user="webxieter" data-embed-version="2" data-pen-title="forms styling" class="codepen") See the Pen
                     script(async src="https://production-assets.codepen.io/assets/embed/ei.js")
-                article(class='article' data-section='article2')
+                article(class='article' id='article2')
                     .article__title
                         | Приёмы в верстке, без которых не обходитя ни один сайт
                     .article__date

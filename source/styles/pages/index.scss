@@ -120,7 +120,14 @@
   text-align: center;
   font-family: 'Roboto-Regular', Arial,sans-serif;
 
-@media screen and(max-height: 610px) {
+@media screen and (max-height: 610px){
     height: 30px;
+    line-height: 16px;
   }
+
+@media screen and (min-width: 470px){
+    height: 30px;
+    line-height: 16px;
+}
+
 }

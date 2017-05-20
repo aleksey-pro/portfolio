@@ -70,10 +70,11 @@
     left: 0;
     display: flex;
     align-items: center;
+    width: 230px;
 
     .blog-items__link {
       color: #fff;
-      display: inline-block;
+      font-weight: bold;
     }
   }
 
@@ -88,8 +89,6 @@
   }
 }
 
-
-
 .blog-items__item {
   display: block;
   padding: 20px 10px 10px;
@@ -97,14 +96,23 @@
   box-sizing: content-box;
   border-right: 3px solid transparent;
 
-  &:hover {
+  &--green {
+      a {
+        color: $brand-green;
+        font-weight: bold;
+      }
     border-right: 3px solid $brand-green;
   }
+
+  @include tablets {
+    border-right: none;
+  }
+
 }
 
 .blog-items__link {
   font-family: 'Robot-Bold', Arial, sans-serif;
-  color: $brand-green;
+  color: $main-font-color;
   text-decoration: none;
 }
 
@@ -131,6 +139,7 @@
   
   @include tablets {
     width: 100%;
+    padding-right: 0;
   }
 }
 
