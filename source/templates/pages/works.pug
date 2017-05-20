@@ -1,0 +1,94 @@
+extends ../layout-about
+
+block title
+    title Мои работы
+
+block socials
+    .socials-block
+        include ../common/socials
+
+block hamburger
+    a(href='#').hamburger-block
+        svg.hamburger-block__icon
+            use(xlink:href='assets/img/sprite.svg#common--hamburger')
+
+block arrow
+    a(href="#").down-arrow
+        svg.down-arrow__icon
+            use(xlink:href='assets/img/sprite.svg#common--arrow_down')
+
+block header__svg-title
+    svg.svg-title
+        use(xlink:href='assets/img/sprite.svg#pages--about--portfolio_title')
+
+block user-text
+    .user__name
+        | Алексей Исаев
+    .user__desc
+        | Личный сайт веб-разработчика
+
+block content
+     section.portfolio
+        .portfolio-head
+            svg(
+            viewbox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle portfolio__triangle portfolio__triangle--left")
+                polygon(points="0,0 0,100 1000,100").triangle.triangle--fill--yellow
+            svg(
+            viewbox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle portfolio__triangle portfolio__triangle--right")
+                polygon(points="0,100 1000,100 1000,0").triangle.triangle--fill--yellow
+            svg.title__svg-bg.portfolio__head-svg
+                use(xlink:href='assets/img/sprite.svg#pages--works--works_title')
+            .title.portfolio-head__title
+                | Мои работы
+        .works-blocks
+            .portfolio__to-site
+                .to-site
+                    .subtitle.to-site__title
+                        | сайт школы онлайн образования
+                    .to-site__subtitle
+                        | HTML, CSS, JAVASCRIPT
+                    .to-site__btn.button
+                        svg.button-icon
+                            use(xlink:href='assets/img/sprite.svg#components--button--link')
+                        span Посмотреть сайт
+            .portfolio__works
+                .works-slider
+                    img(src='/assets/img/portfolio_slides.png' alt='works').works-slider__image
+            .works-preview
+                .works-preview__down
+                    a(href='#').works-preview__link
+                        svg.works-preview__icon
+                            use(xlink:href='assets/img/sprite.svg#components--portfolio--portf_arrow_down')
+                .works-preview__up
+                    a(href='#')
+                        svg.works-preview__icon
+                            use(xlink:href='assets/img/sprite.svg#components--portfolio--portf_arrow_up')
+     section.reviews
+        .reviews__title.title
+             | что обо мне
+             |
+             br
+             |
+             | говорят
+             svg.title__svg-bg.reviews__title-svg
+                 use(xlink:href='assets/img/sprite.svg#pages--works--about_title')
+        mixin reviews(id, text, name, prof)
+            .reiews-list__item.review
+                .review__image
+                   div(id=`review-pic--${id}` class='review__pic')
+                p= text
+                .review__name= name
+                .review__prof= prof
+        .reviews-list
+            .reviews-list__container
+                +reviews(1, 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'Ковальчук Дмитрий', '--основатель loftschool')
+                +reviews(2, 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишко старых браузерах!', 'Сабанцев Владимир', '--преподаватель loftschool')
+        .reviews__callback-form
+            include ../common/contact-form
+        a.arrow-up
+            svg.down-arrow__icon.down-arrow__icon--reversed
+                use(xlink:href='assets/img/sprite.svg#common--arrow_down')

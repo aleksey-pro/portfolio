@@ -1,0 +1,61 @@
+.call {
+  width: 380px;
+  display: inline-block;
+  background-color: rgba(#fff, 0.5);
+  @include border-radius(5px);
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 20px 0;
+
+
+  @include tablets {
+    width: 300px;
+  }
+}
+
+.call__title {
+  margin-bottom: 60px;
+}
+
+.call-fields {
+  display: block;
+}
+
+.call-fields__field {
+  display: block;
+  margin-bottom: 20px;
+  padding: 15px;
+  @include border-radius(20px);
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+@include placeholder {
+  color: $brown;
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  opacity: 0.5;
+}
+
+.btn-nav {
+  margin: 0 -20px;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 12px 0;
+    display: block;
+    background-color: $light-green;
+    border-left: solid 2px #a2bd9d;
+
+    &:hover {
+      background-color: $brand-green;
+    }
+    &:first-child {
+      border-left: none;
+    }
+  }
+}

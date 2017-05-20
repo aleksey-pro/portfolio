@@ -1,0 +1,54 @@
+.works-slider {
+  position: relative;
+  height: 530px;
+
+  @include phones {
+    height: 256px;
+  }
+
+
+  .works-slider__image {
+    height: 310px;
+    max-width: 100%;
+    display: block;
+    @include centered();
+
+    @include tablets {
+      height: 380px;
+    }
+    @include phones {
+      height: 160px;
+    }
+  }
+}
+
+.works-preview__down, .works-preview__up {
+  width: 50%;
+  height: 225px;
+  background-size: cover;
+  float: left;
+  position: relative;
+
+  @include phones {
+    height: 90px;
+  }
+}
+
+.works-preview__down {
+  background: $grey url('../../assets/img/portfolio-downslide.jpg') center  center  no-repeat;
+  opacity: 0.5;
+  background-size: contain;
+}
+
+.works-preview__up {
+  background: $grey url('../../assets/img/portfolio-upslide.jpg') center  center  no-repeat;
+  opacity: 0.5;
+  background-size: contain;
+}
+
+.works-preview__icon {
+  width: 45px;
+  height: 30px;
+  fill: #fff;
+  @include centered();
+}
