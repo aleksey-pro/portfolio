@@ -1,6 +1,6 @@
-.call {
+.form {
   width: 380px;
-  height: 440px;
+  height: 460px;
   display: inline-block;
   @include border-radius(10px);
   position: relative;
@@ -21,7 +21,7 @@
 
 }
 
-.call__content {
+.form__content {
   padding: 0 20px;
   position: absolute;
   bottom: 0;
@@ -29,17 +29,16 @@
   right: 0;
 }
 
-.call__title {
+.form__title {
   margin-bottom: 50px;
-
 }
 
-.call-fields {
+.form-fields {
   display: block;
 
 }
 
-.call-fields__field {
+.form-fields__field {
   display: block;
   margin-bottom: 20px;
   padding: 15px;
@@ -53,4 +52,22 @@
   color: $brown;
   font-family: "Roboto-Regular", Arial, sans-serif;
   opacity: 0.5;
+}
+
+.server-mes{
+  display: none;
+}
+
+.has-error{
+  background-color: none;
+  border: 1px solid #f97e76 !important;
+}
+.has-success{
+  background-color: none;
+  border-color: 1px solid #3c763d !important;
+}
+
+.error-mes, .success-mes{
+  color: #fff;
+  margin: 10px 0;
 }

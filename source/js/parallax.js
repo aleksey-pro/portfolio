@@ -1,6 +1,6 @@
 function parallax() {
   
-  var bg = document.querySelector('.header__bg'),
+  var bg = document.querySelector('.Background'),
     title = document.querySelector('.header__title'),
     svgBG = document.querySelector('.svg-title');
 

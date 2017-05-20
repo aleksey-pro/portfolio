@@ -2,17 +2,16 @@ function blogModule() {
   
   var label = $('.tail');
   var aside = $('.blog-nav');
-  var content = $('.articles');
+  var link = $('.blog-items__link');
   
   function _push() {
-    content.toggleClass('articles--collapsed');
     aside.toggleClass('blog-nav--opened');
   }
   
   function _stickyMenu() {
     var navPos, scrolled;
     navPos = aside.offset().top;
-    
+
     $(window).scroll(function(){
       scrolled = $(window).scrollTop();
       if( scrolled >= navPos) {
@@ -23,9 +22,26 @@ function blogModule() {
     })
   }
   
+  function _toSection(e) {
+    e.preventDefault();
+    var $article = $('.article');
+    var source = $(this).attr('href');
+    window.location.hash = source;
+
+    var articlePOs = $article.offset().top;
+    var scrolled = $(window).scrollTop();
+    
+    
+    // console.log(articlePOs);
+    // var reqPos = scrollTo.offset().top;
+    //
+    // $('body, html').animate({scrollTop: reqPos}, 500);
+  }
+  
   
   function init() {
     _stickyMenu();
+    link.on('click', _toSection);
     label.on('click', function(e) {
       e.preventDefault();
       _push();

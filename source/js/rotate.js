@@ -1,7 +1,7 @@
 function rotateModule() {
   
   let button = document.querySelector('.welcome__auth');
-  let buttonBack = document.querySelector('.login-nav__item');
+  let buttonBack = document.querySelector('#flip');
   
   var _Flip = function() {
     let container = document.querySelector('.flip-container');
@@ -10,7 +10,6 @@ function rotateModule() {
   };
   
   var _backFlip = function() {
-    console.log(buttonBack);
     let container = document.querySelector('.flip-container');
     container.classList.remove('active');
     button.style.display = 'block';

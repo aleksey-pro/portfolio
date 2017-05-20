@@ -23,7 +23,7 @@
 .blog-content {
   position: relative;
   background-color: $pale;
-  padding: 50px 110px 0 45px;
+  padding-top: 50px;
   @extend %clearfix;
 
   @include tablets {
@@ -40,15 +40,18 @@
   width: 35%;
   padding-right: 80px;
   position: relative;
+  transition: transform 0.5s;
 
   @include tablets {
     transform: translate(-110%);
-    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+
   }
 
   @include phones {
     transform: translate(-105%);
-    position: absolute;
   }
 
 
@@ -57,20 +60,27 @@
   }
 
   &--opened {
-    transform: translate(-10%);
-    position: static;
-    background-color: $brand-green;
-    padding-right: 20px;
+    transform: translate(0);
+    position: fixed;
+    background-color: rgba($brand-green, 0.8);
+    padding-right: 1.25rem;
+    z-index: 1000;
+    top: 0;
+    height: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
 
     .blog-items__link {
       color: #fff;
+      display: inline-block;
     }
   }
 
   &--fixed {
     position: fixed;
     top: 0;
-    width: 280px;
+    width: 35%;
 
     @include tablets {
       width: 230px;
@@ -117,6 +127,7 @@
 .articles {
   float: right;
   width: 65%;
+  padding-right: 110px;
   
   @include tablets {
     width: 100%;
@@ -125,12 +136,4 @@
 
 .blog-footer,.blog-footer-copy{
   position: static;
-}
-
-.articles--collapsed {
-  width: 65%;
-
-  @include phones {
-    width: 15%;
-  }
 }

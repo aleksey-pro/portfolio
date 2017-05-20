@@ -12,6 +12,9 @@ const slide = require('./slide-menu');
 const works = require('./slider');
 const blog = require('./blog-menu');
 const water = require('../WebGL/index-water');
+const arrow = require('./downArrow');
+const form = require('./loginForm');
+const auth = require('./authForm');
 
 
 const loadPoly = new loadPolyfills();
@@ -26,6 +29,9 @@ const preloader = new preload();
 const slider = new works();
 const blogMenu = new blog();
 const WebGL = new water();
+const arrowScroll = new arrow();
+const formProcess = new form();
+const authProcess = new auth();
 
 
 
@@ -36,7 +42,9 @@ loadPoly.init();
 jQueryTabs.init();
 slider.init();
 WebGL.init();
-
+arrowScroll.init();
+formProcess.init();
+authProcess.init();
 
 if(document.body.classList.contains('hasMenu')) {
   blogMenu.init();
