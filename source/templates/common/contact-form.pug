@@ -1,0 +1,19 @@
+.call.blur-form__wrapper
+    .blur-form
+    .call__content
+        .subtitle.call__title
+            | связаться со мной
+        .call-fields
+            mixin inputs(type, placeholder, id)
+                    input(type=type placeholder=placeholder id=`auth-input--${id}` name=id).call-fields__field
+            form.call-fields__form
+                +inputs('text','Имя', 'name')
+                +inputs('text','Email', 'email')
+                textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='6').call-fields__field
+
+            mixin btns(href, name, cls)
+                a(href=href class=`user-nav__item ${cls}__item`)
+                    span.user-nav__link= name
+        nav.user-nav.contact-nav
+            +btns('#','Отправить','contact-nav')
+            +btns('#','Очистить','contact-nav')
