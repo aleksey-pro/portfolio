@@ -37,7 +37,7 @@ function waterModule() {
   });
   
   haze.gl.createUniform('2f','mouse',0.5,0.5);
-  
+
   const smooth=(n=6)=>{
     let samples=[];
     return (v)=>{
@@ -48,12 +48,12 @@ function waterModule() {
       return samples.reduce((l,cur)=>(l+cur))/samples.length;
     }
   }
-  
+
   const curve=(v,p=0.8)=>v==0?0:Math.pow(Math.abs(v),p)*(v/Math.abs(v));
-  
+
   let smoothX=smooth();
   let smoothY=smooth();
-  
+
   let isTouchDevice = 'ontouchstart' in document.documentElement;
   
   let parallaxPos={
@@ -88,6 +88,7 @@ function waterModule() {
     }
   }
   
+  
   return  {
     init: function() {
       
@@ -107,6 +108,7 @@ function waterModule() {
           return 1;
         }
       }
+ 
       window.addEventListener('resize',updateSize);
       function updateSize(){
         let container=document.querySelector(divSelector);
@@ -118,6 +120,7 @@ function waterModule() {
         haze.gl.createUniform('1f','dpi',haze.dpi);
         haze.gl.createUniform('2f','resolution',haze.width*haze.dpi,haze.height*haze.dpi);
       }
+      
       updateSize();
     }
   }
