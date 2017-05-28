@@ -32,11 +32,18 @@ module.exports = {
     // new FaviconsWebpackPlugin('./favicon.png')
   ],
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: ['babel-loader']
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },
+      {
+        test: /\.(frag|vert)$/,
+        loader: 'webpack-glsl-loader'
       }
     ]
   }

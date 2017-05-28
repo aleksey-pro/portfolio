@@ -1,19 +1,19 @@
-.call.blur-form__wrapper
+.form.blur-form__wrapper
     .blur-form
-    .call__content
-        .subtitle.call__title
+    form(action='#' method='POST' id='ajax_form').form__content
+        .subtitle.form__title
             | связаться со мной
-        .call-fields
+        .form-fields
             mixin inputs(type, placeholder, id)
-                    input(type=type placeholder=placeholder id=`auth-input--${id}` name=id).call-fields__field
-            form.call-fields__form
+                input(type=type placeholder=placeholder id=`auth-input--${id}` name=id ).form-fields__field
+            .form-fields__form
                 +inputs('text','Имя', 'name')
                 +inputs('text','Email', 'email')
-                textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='6').call-fields__field
-
-            mixin btns(href, name, cls)
-                a(href=href class=`user-nav__item ${cls}__item`)
-                    span.user-nav__link= name
-        nav.user-nav.contact-nav
-            +btns('#','Отправить','contact-nav')
-            +btns('#','Очистить','contact-nav')
+                textarea(placeholder='Ваше сообщение', id='auth-input--mess' name='mess' rows='6').form-fields__field
+            .server-mes.error-mes
+            .server-mes.success-mes
+        .user-nav.form-nav
+            button(class='user-nav__item form-nav__btn' type='submit' name='submit')
+                span.user-nav__link Отправить
+            button(class='user-nav__item form-nav__btn clear' type='reset')
+                span.user-nav__link Очистить

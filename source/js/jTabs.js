@@ -24,11 +24,11 @@ function jTabsModule() {
     function setUpListeners() {
       $tabMenu.on('click', function(e) {
         let dataTab = $(this).data('tab');
-        $getWrapper = $(this).closest($wrapper);
+        let $getWrapper = $(this).closest($wrapper);
         $getWrapper.find($tabMenu).removeClass('active');
         $(this).addClass('active');
-        $getWrapper.find($allTabs).hide('slow');
-        $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show('slow');
+        $getWrapper.find($allTabs).hide();
+        $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
         e.preventDefault();
       });
     }

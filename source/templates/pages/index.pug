@@ -4,25 +4,26 @@ block title
     title Главная страница
 
 block content
-        .welcome__auth
-            a(class='log-button' href='#')
-                span.log-button__text Авторизоваться
-        .login-block-wrapper
-            .flip-container
-                .flipper
-                    .login-block.login-frontside
-                        .welcome-user
-                            include ../common/user
-                        .welcome-socials
-                            include ../common/socials
-                        mixin btns (href, name, cls)
-                            a(href=href class=`user-nav__item ${cls}__item`)
-                                span.user-nav__link= name
-                        nav.user-nav
-                            +btns('works.html', 'Мои работы', 'welcome-nav--wide')
-                            +btns('about.html', 'Обо мне', 'welcome-nav')
-                            +btns('blog.html', 'Блог', 'welcome-nav')
-                    .login-block.login-backside
+    .welcome__auth
+        a(class='log-button' href='#')
+            span.log-button__text Авторизоваться
+    .login-block-wrapper
+        .flip-container
+            .flipper
+                .login-block.login-frontside
+                    .welcome-user
+                        include ../common/user
+                    .welcome-socials
+                        include ../common/socials
+                    mixin btns (href, name, cls)
+                        a(href=href class=`user-nav__item ${cls}__item`)
+                            span.user-nav__link= name
+                    nav.user-nav
+                        +btns('works.html', 'Мои работы', 'welcome-nav--wide')
+                        +btns('about.html', 'Обо мне', 'welcome-nav')
+                        +btns('blog.html', 'Блог', 'welcome-nav')
+                .login-block.login-backside
+                    form#auth_form
                         .subtitle.login__title
                             | авторизуйтесь
                             mixin inputs(type, placeholder, id, svgPath)
@@ -34,20 +35,21 @@ block content
                         form.login-form
                             +inputs('text','Логин', 'login', 'assets/img/sprite.svg#components--auth--login')
                             +inputs('text','Пароль', 'pass', 'assets/img/sprite.svg#components--auth--password')
-                        .check-form
-                            input(type='checkbox' id='man' name='man' class='check-input')
-                            span.checkbox-custom
-                            label(class='check-label' for='man') Я человек
-                            p.check-form__quest Вы точно не робот?
-                            input(type='radio' id='yes' name='choose' class='choose-input--yes')
-                            span(class='radio-custom' id='radio-yes')
-                            label(class='choose-label choose-label--yes' for='yes') Да
-                            input(type='radio' id='no' name='choose' class='choose-input--no')
-                            span(class='radio-custom' id='radio-no')
-                            label(class='choose-label choose-label--no' for='no') Не уверен
-                        mixin btns (href, name, cls)
-                            a(href=href class=`user-nav__item ${cls}__item`)
-                                span.user-nav__link= name
-                        nav.user-nav.login-nav
-                            +btns('index.html', 'На главную', 'login-nav')
-                            +btns('admin.html', 'Войти', 'login-nav')
+                            .check-form
+                                input(type='checkbox' id='man' name='man' class='check-input')
+                                span.checkbox-custom
+                                label(class='check-label' for='man') Я человек
+                                p.check-form__quest Вы точно не робот?
+                                input(type='radio' id='yes' name='choose' class='choose-input--yes')
+                                span(class='radio-custom' id='radio-yes')
+                                label(class='choose-label choose-label--yes' for='yes') Да
+                                input(type='radio' id='no' name='choose' class='choose-input--no')
+                                span(class='radio-custom' id='radio-no')
+                                label(class='choose-label choose-label--no' for='no') Не уверен
+                            .server-mes.error-mes
+                            .server-mes.success-mes
+                            nav.user-nav.login-btns
+                                a(href='#' class='user-nav__item login-nav__item' id='flip')
+                                    span.user-nav__link На главную
+                                a(href='' class='user-nav__item login-nav__item' id='auth')
+                                    span.user-nav__link Авторизация
